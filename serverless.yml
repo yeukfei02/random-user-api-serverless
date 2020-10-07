@@ -1,0 +1,64 @@
+service: random-user-api-serverless
+
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: v1
+  region: ap-southeast-1
+  environment:
+    NODE_ENV: production
+
+functions:
+  main:
+    handler: src/main/handler.getMain
+    events:
+      - http:
+          path: /
+          method: get
+          cors: true
+
+  createRandomUser:
+    handler: src/createRandomUser/handler.createRandomUser
+    events:
+      - http:
+          path: /random-user
+          method: post
+          cors: true
+
+  getRandomUser:
+    handler: src/getRandomUser/handler.getRandomUser
+    events:
+      - http:
+          path: /random-user
+          method: get
+          cors: true
+
+  getRandomUserById:
+    handler: src/getRandomUserById/handler.getRandomUserById
+    events:
+      - http:
+          path: /random-user/{id}
+          method: get
+          cors: true
+
+  updateRandomUserById:
+    handler: src/updateRandomUserById/handler.updateRandomUserById
+    events:
+      - http:
+          path: /random-user/{id}
+          method: put
+          cors: true
+
+  deleteRandomUserById:
+    handler: src/deleteRandomUserById/handler.deleteRandomUserById
+    events:
+      - http:
+          path: /random-user/{id}
+          method: delete
+          cors: true
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-offline
