@@ -1,6 +1,8 @@
+org: yeukfei02
+app: random-user-api-serverless
 service: random-user-api-serverless
 
-frameworkVersion: "2"
+frameworkVersion: '2'
 
 provider:
   name: aws
