@@ -8,35 +8,10 @@
 	"item": [
 		{
 			"name": "/random-user",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"gender\": \"male\",\n    \"name\": {\n        \"title\": \"mr\",\n        \"first\": \"brad\",\n        \"last\": \"gibson\"\n    },\n    \"location\": {\n        \"street\": \"9278 new road\",\n        \"city\": \"kilcoole\",\n        \"state\": \"waterford\",\n        \"postcode\": \"93027\",\n        \"coordinates\": {\n            \"latitude\": \"20.9267\",\n            \"longitude\": \"-7.9310\"\n        },\n        \"timezone\": {\n            \"offset\": \"-3:30\",\n            \"description\": \"Newfoundland\"\n        }\n    },\n    \"email\": \"brad.gibson@example.com\",\n    \"dob\": {\n        \"date\": \"1993-07-20T09:44:18.674Z\",\n        \"age\": 26\n    },\n    \"registered\": {\n        \"date\": \"2002-05-21T10:59:49.966Z\",\n        \"age\": 17\n    },\n    \"phone\": \"011-962-7516\",\n    \"picture\": {\n        \"large\": \"https://randomuser.me/api/portraits/men/75.jpg\",\n        \"medium\": \"https://randomuser.me/api/portraits/med/men/75.jpg\",\n        \"thumbnail\": \"https://randomuser.me/api/portraits/thumb/men/75.jpg\"\n    }\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "localhost:3000/v1/random-user",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"v1",
-						"random-user"
-					]
-				},
-				"description": "/random-user"
-			},
-			"response": [
+			"item": [
 				{
 					"name": "/random-user",
-					"originalRequest": {
+					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -49,107 +24,98 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:3000/v1/random-user",
+							"raw": "localhost:3000/v1/api/random-user",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
 								"v1",
+								"api",
 								"random-user"
 							]
-						}
+						},
+						"description": "/random-user"
 					},
-					"status": "Created",
-					"code": 201,
-					"_postman_previewlanguage": "json",
-					"header": [
+					"response": [
 						{
-							"key": "content-type",
-							"value": "application/json; charset=utf-8"
-						},
-						{
-							"key": "vary",
-							"value": "origin"
-						},
-						{
-							"key": "access-control-allow-credentials",
-							"value": "true"
-						},
-						{
-							"key": "access-control-expose-headers",
-							"value": "WWW-Authenticate,Server-Authorization"
-						},
-						{
-							"key": "cache-control",
-							"value": "no-cache"
-						},
-						{
-							"key": "content-length",
-							"value": "30"
-						},
-						{
-							"key": "Date",
-							"value": "Wed, 07 Oct 2020 14:51:25 GMT"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						},
-						{
-							"key": "Keep-Alive",
-							"value": "timeout=5"
-						}
-					],
-					"cookie": [],
-					"body": "{\n    \"message\": \"createRandomUser\"\n}"
-				}
-			]
-		},
-		{
-			"name": "/random-user",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "localhost:3000/v1/random-user?page=1&results=5",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"v1",
-						"random-user"
-					],
-					"query": [
-						{
-							"key": "page",
-							"value": "1"
-						},
-						{
-							"key": "results",
-							"value": "5"
+							"name": "/random-user",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"gender\": \"male\",\n    \"name\": {\n        \"title\": \"mr\",\n        \"first\": \"brad\",\n        \"last\": \"gibson\"\n    },\n    \"location\": {\n        \"street\": \"9278 new road\",\n        \"city\": \"kilcoole\",\n        \"state\": \"waterford\",\n        \"postcode\": \"93027\",\n        \"coordinates\": {\n            \"latitude\": \"20.9267\",\n            \"longitude\": \"-7.9310\"\n        },\n        \"timezone\": {\n            \"offset\": \"-3:30\",\n            \"description\": \"Newfoundland\"\n        }\n    },\n    \"email\": \"brad.gibson@example.com\",\n    \"dob\": {\n        \"date\": \"1993-07-20T09:44:18.674Z\",\n        \"age\": 26\n    },\n    \"registered\": {\n        \"date\": \"2002-05-21T10:59:49.966Z\",\n        \"age\": 17\n    },\n    \"phone\": \"011-962-7516\",\n    \"picture\": {\n        \"large\": \"https://randomuser.me/api/portraits/men/75.jpg\",\n        \"medium\": \"https://randomuser.me/api/portraits/med/men/75.jpg\",\n        \"thumbnail\": \"https://randomuser.me/api/portraits/thumb/men/75.jpg\"\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/v1/random-user",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"random-user"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin"
+								},
+								{
+									"key": "access-control-allow-credentials",
+									"value": "true"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "30"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 07 Oct 2020 14:51:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"createRandomUser\"\n}"
 						}
 					]
 				},
-				"description": "/random-user"
-			},
-			"response": [
 				{
 					"name": "/random-user",
-					"originalRequest": {
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
 						"method": "GET",
 						"header": [],
 						"body": {
@@ -162,13 +128,14 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:3000/v1/random-user?page=1&results=5",
+							"raw": "localhost:3000/v1/api/random-user?page=1&results=5",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
 								"v1",
+								"api",
 								"random-user"
 							],
 							"query": [
@@ -181,93 +148,102 @@
 									"value": "5"
 								}
 							]
-						}
+						},
+						"description": "/random-user"
 					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
+					"response": [
 						{
-							"key": "content-type",
-							"value": "application/json; charset=utf-8"
-						},
-						{
-							"key": "vary",
-							"value": "origin,accept-encoding"
-						},
-						{
-							"key": "access-control-allow-credentials",
-							"value": "true"
-						},
-						{
-							"key": "access-control-expose-headers",
-							"value": "WWW-Authenticate,Server-Authorization"
-						},
-						{
-							"key": "cache-control",
-							"value": "no-cache"
-						},
-						{
-							"key": "content-encoding",
-							"value": "gzip"
-						},
-						{
-							"key": "Date",
-							"value": "Wed, 07 Oct 2020 15:28:13 GMT"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						},
-						{
-							"key": "Keep-Alive",
-							"value": "timeout=5"
-						},
-						{
-							"key": "Transfer-Encoding",
-							"value": "chunked"
+							"name": "/random-user",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/v1/random-user?page=1&results=5",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"random-user"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "results",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin,accept-encoding"
+								},
+								{
+									"key": "access-control-allow-credentials",
+									"value": "true"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 07 Oct 2020 15:28:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"getRandomUser\",\n    \"result\": [\n        {\n            \"gender\": \"female\",\n            \"name\": {\n                \"title\": \"Mrs\",\n                \"first\": \"Gunhild\",\n                \"last\": \"Wiik\"\n            },\n            \"location\": {\n                \"street\": {\n                    \"number\": 7855,\n                    \"name\": \"Greveveien\"\n                },\n                \"city\": \"Ytre Enebakk\",\n                \"state\": \"Møre og Romsdal\",\n                \"country\": \"Norway\",\n                \"postcode\": \"6841\",\n                \"coordinates\": {\n                    \"latitude\": \"57.6599\",\n                    \"longitude\": \"48.3989\"\n                },\n                \"timezone\": {\n                    \"offset\": \"+9:00\",\n                    \"description\": \"Tokyo, Seoul, Osaka, Sapporo, Yakutsk\"\n                }\n            },\n            \"email\": \"gunhild.wiik@example.com\",\n            \"login\": {\n                \"uuid\": \"5f7ec4f6-4ecd-4e72-8e14-81f42504ddc6\",\n                \"username\": \"crazyleopard161\",\n                \"password\": \"bacardi\",\n                \"salt\": \"3V23Bhp4\",\n                \"md5\": \"95e76cc37a398597791d466dd52b6762\",\n                \"sha1\": \"d60fc6322f33b0f932bd9a5bebf97d677f9b7172\",\n                \"sha256\": \"569593d55ab6de0da6515d9a6c5cba021046bfd47fc81531e0fb621dce74df54\"\n            },\n            \"dob\": {\n                \"date\": \"1996-10-02T07:10:28.078Z\",\n                \"age\": 24\n            },\n            \"registered\": {\n                \"date\": \"2006-09-13T18:08:54.269Z\",\n                \"age\": 14\n            },\n            \"phone\": \"30288743\",\n            \"cell\": \"47334453\",\n            \"id\": {\n                \"name\": \"FN\",\n                \"value\": \"02109639659\"\n            },\n            \"picture\": {\n                \"large\": \"https://randomuser.me/api/portraits/women/16.jpg\",\n                \"medium\": \"https://randomuser.me/api/portraits/med/women/16.jpg\",\n                \"thumbnail\": \"https://randomuser.me/api/portraits/thumb/women/16.jpg\"\n            },\n            \"nat\": \"NO\"\n        },\n        {\n            \"gender\": \"male\",\n            \"name\": {\n                \"title\": \"Mr\",\n                \"first\": \"Juho\",\n                \"last\": \"Kokko\"\n            },\n            \"location\": {\n                \"street\": {\n                    \"number\": 2026,\n                    \"name\": \"Hämeenkatu\"\n                },\n                \"city\": \"Helsinki\",\n                \"state\": \"North Karelia\",\n                \"country\": \"Finland\",\n                \"postcode\": 22028,\n                \"coordinates\": {\n                    \"latitude\": \"-20.4157\",\n                    \"longitude\": \"-131.4402\"\n                },\n                \"timezone\": {\n                    \"offset\": \"-11:00\",\n                    \"description\": \"Midway Island, Samoa\"\n                }\n            },\n            \"email\": \"juho.kokko@example.com\",\n            \"login\": {\n                \"uuid\": \"c4577963-b646-4503-b152-9c09bdbb89ea\",\n                \"username\": \"organictiger662\",\n                \"password\": \"lipstick\",\n                \"salt\": \"KXdJQZRQ\",\n                \"md5\": \"04d95c837118e66edffaa3f1d8270471\",\n                \"sha1\": \"0cdd68f5690fb477985ab13b844d80ce0067ba8e\",\n                \"sha256\": \"537334cd386989c438fa0aa52919a0d905ad6840737c229b061b5c96aacbd163\"\n            },\n            \"dob\": {\n                \"date\": \"1954-12-07T11:08:16.183Z\",\n                \"age\": 66\n            },\n            \"registered\": {\n                \"date\": \"2015-11-20T07:15:58.663Z\",\n                \"age\": 5\n            },\n            \"phone\": \"03-768-025\",\n            \"cell\": \"041-169-74-81\",\n            \"id\": {\n                \"name\": \"HETU\",\n                \"value\": \"NaNNA631undefined\"\n            },\n            \"picture\": {\n                \"large\": \"https://randomuser.me/api/portraits/men/91.jpg\",\n                \"medium\": \"https://randomuser.me/api/portraits/med/men/91.jpg\",\n                \"thumbnail\": \"https://randomuser.me/api/portraits/thumb/men/91.jpg\"\n            },\n            \"nat\": \"FI\"\n        },\n        {\n            \"gender\": \"male\",\n            \"name\": {\n                \"title\": \"Mr\",\n                \"first\": \"Jeppe\",\n                \"last\": \"Johansen\"\n            },\n            \"location\": {\n                \"street\": {\n                    \"number\": 3347,\n                    \"name\": \"Åbakkevej\"\n                },\n                \"city\": \"Esbjerg V\",\n                \"state\": \"Nordjylland\",\n                \"country\": \"Denmark\",\n                \"postcode\": 17928,\n                \"coordinates\": {\n                    \"latitude\": \"-55.7866\",\n                    \"longitude\": \"100.9054\"\n                },\n                \"timezone\": {\n                    \"offset\": \"-12:00\",\n                    \"description\": \"Eniwetok, Kwajalein\"\n                }\n            },\n            \"email\": \"jeppe.johansen@example.com\",\n            \"login\": {\n                \"uuid\": \"e2c9d039-229f-4b7e-aa40-506405f3a1c6\",\n                \"username\": \"tinyleopard981\",\n                \"password\": \"profit\",\n                \"salt\": \"Ux4x4GqC\",\n                \"md5\": \"600dd571533436dfa745fc91cf4a7e16\",\n                \"sha1\": \"4b20404defd3fd264ad9c7ff37ecc8716e88fae5\",\n                \"sha256\": \"ee30c748c2e18c49745c79523790dcfe6daebaaf29c6445dd38eb1d5700b941c\"\n            },\n            \"dob\": {\n                \"date\": \"1991-07-13T09:46:25.710Z\",\n                \"age\": 29\n            },\n            \"registered\": {\n                \"date\": \"2005-10-04T00:05:16.326Z\",\n                \"age\": 15\n            },\n            \"phone\": \"78421202\",\n            \"cell\": \"76407721\",\n            \"id\": {\n                \"name\": \"CPR\",\n                \"value\": \"130791-6006\"\n            },\n            \"picture\": {\n                \"large\": \"https://randomuser.me/api/portraits/men/46.jpg\",\n                \"medium\": \"https://randomuser.me/api/portraits/med/men/46.jpg\",\n                \"thumbnail\": \"https://randomuser.me/api/portraits/thumb/men/46.jpg\"\n            },\n            \"nat\": \"DK\"\n        },\n        {\n            \"gender\": \"female\",\n            \"name\": {\n                \"title\": \"Mrs\",\n                \"first\": \"Angelika\",\n                \"last\": \"Otterspeer\"\n            },\n            \"location\": {\n                \"street\": {\n                    \"number\": 1997,\n                    \"name\": \"Alfred Mozerhof\"\n                },\n                \"city\": \"Den Burg\",\n                \"state\": \"Limburg\",\n                \"country\": \"Netherlands\",\n                \"postcode\": 85758,\n                \"coordinates\": {\n                    \"latitude\": \"72.4778\",\n                    \"longitude\": \"-45.1249\"\n                },\n                \"timezone\": {\n                    \"offset\": \"-3:00\",\n                    \"description\": \"Brazil, Buenos Aires, Georgetown\"\n                }\n            },\n            \"email\": \"angelika.otterspeer@example.com\",\n            \"login\": {\n                \"uuid\": \"e847bd8f-d37b-4d63-a413-b971bc32a00a\",\n                \"username\": \"whiteduck227\",\n                \"password\": \"dte4uw\",\n                \"salt\": \"moyIGfmn\",\n                \"md5\": \"b16a79f097730a3724a882be8236acc4\",\n                \"sha1\": \"864434c10f8334960ec83fb04efe05ebbd3a7582\",\n                \"sha256\": \"304a27443ab057376dd34a36d41bb7d1ec84369aaf8925f8948eff93a800a8f6\"\n            },\n            \"dob\": {\n                \"date\": \"1952-04-20T10:25:39.301Z\",\n                \"age\": 68\n            },\n            \"registered\": {\n                \"date\": \"2018-07-19T04:14:18.889Z\",\n                \"age\": 2\n            },\n            \"phone\": \"(376)-813-4609\",\n            \"cell\": \"(907)-484-3743\",\n            \"id\": {\n                \"name\": \"BSN\",\n                \"value\": \"07187677\"\n            },\n            \"picture\": {\n                \"large\": \"https://randomuser.me/api/portraits/women/27.jpg\",\n                \"medium\": \"https://randomuser.me/api/portraits/med/women/27.jpg\",\n                \"thumbnail\": \"https://randomuser.me/api/portraits/thumb/women/27.jpg\"\n            },\n            \"nat\": \"NL\"\n        },\n        {\n            \"gender\": \"male\",\n            \"name\": {\n                \"title\": \"Mr\",\n                \"first\": \"Amável\",\n                \"last\": \"Rocha\"\n            },\n            \"location\": {\n                \"street\": {\n                    \"number\": 4164,\n                    \"name\": \"Rua Maranhão \"\n                },\n                \"city\": \"Suzano\",\n                \"state\": \"Amapá\",\n                \"country\": \"Brazil\",\n                \"postcode\": 92417,\n                \"coordinates\": {\n                    \"latitude\": \"44.5897\",\n                    \"longitude\": \"28.1860\"\n                },\n                \"timezone\": {\n                    \"offset\": \"-4:00\",\n                    \"description\": \"Atlantic Time (Canada), Caracas, La Paz\"\n                }\n            },\n            \"email\": \"amavel.rocha@example.com\",\n            \"login\": {\n                \"uuid\": \"08953027-d336-4981-b35e-322e45cad357\",\n                \"username\": \"goldenpeacock836\",\n                \"password\": \"voyager1\",\n                \"salt\": \"WP4r5nbq\",\n                \"md5\": \"394142589e53917a9f9b9e11588de063\",\n                \"sha1\": \"46fdc9b1d23752d96c1dc0e4241ce5202c56c4ab\",\n                \"sha256\": \"9be46892257524abf7a84e2fd887c98ad34aae237c8e387c4e5da1e08bd1f318\"\n            },\n            \"dob\": {\n                \"date\": \"1965-04-02T11:14:27.630Z\",\n                \"age\": 55\n            },\n            \"registered\": {\n                \"date\": \"2011-07-07T04:46:46.364Z\",\n                \"age\": 9\n            },\n            \"phone\": \"(71) 0335-4546\",\n            \"cell\": \"(16) 2291-9250\",\n            \"id\": {\n                \"name\": \"\",\n                \"value\": null\n            },\n            \"picture\": {\n                \"large\": \"https://randomuser.me/api/portraits/men/17.jpg\",\n                \"medium\": \"https://randomuser.me/api/portraits/med/men/17.jpg\",\n                \"thumbnail\": \"https://randomuser.me/api/portraits/thumb/men/17.jpg\"\n            },\n            \"nat\": \"BR\"\n        }\n    ]\n}"
 						}
-					],
-					"cookie": [],
-					"body": "{\n    \"message\": \"getRandomUser\",\n    \"result\": [\n        {\n            \"gender\": \"female\",\n            \"name\": {\n                \"title\": \"Mrs\",\n                \"first\": \"Gunhild\",\n                \"last\": \"Wiik\"\n            },\n            \"location\": {\n                \"street\": {\n                    \"number\": 7855,\n                    \"name\": \"Greveveien\"\n                },\n                \"city\": \"Ytre Enebakk\",\n                \"state\": \"Møre og Romsdal\",\n                \"country\": \"Norway\",\n                \"postcode\": \"6841\",\n                \"coordinates\": {\n                    \"latitude\": \"57.6599\",\n                    \"longitude\": \"48.3989\"\n                },\n                \"timezone\": {\n                    \"offset\": \"+9:00\",\n                    \"description\": \"Tokyo, Seoul, Osaka, Sapporo, Yakutsk\"\n                }\n            },\n            \"email\": \"gunhild.wiik@example.com\",\n            \"login\": {\n                \"uuid\": \"5f7ec4f6-4ecd-4e72-8e14-81f42504ddc6\",\n                \"username\": \"crazyleopard161\",\n                \"password\": \"bacardi\",\n                \"salt\": \"3V23Bhp4\",\n                \"md5\": \"95e76cc37a398597791d466dd52b6762\",\n                \"sha1\": \"d60fc6322f33b0f932bd9a5bebf97d677f9b7172\",\n                \"sha256\": \"569593d55ab6de0da6515d9a6c5cba021046bfd47fc81531e0fb621dce74df54\"\n            },\n            \"dob\": {\n                \"date\": \"1996-10-02T07:10:28.078Z\",\n                \"age\": 24\n            },\n            \"registered\": {\n                \"date\": \"2006-09-13T18:08:54.269Z\",\n                \"age\": 14\n            },\n            \"phone\": \"30288743\",\n            \"cell\": \"47334453\",\n            \"id\": {\n                \"name\": \"FN\",\n                \"value\": \"02109639659\"\n            },\n            \"picture\": {\n                \"large\": \"https://randomuser.me/api/portraits/women/16.jpg\",\n                \"medium\": \"https://randomuser.me/api/portraits/med/women/16.jpg\",\n                \"thumbnail\": \"https://randomuser.me/api/portraits/thumb/women/16.jpg\"\n            },\n            \"nat\": \"NO\"\n        },\n        {\n            \"gender\": \"male\",\n            \"name\": {\n                \"title\": \"Mr\",\n                \"first\": \"Juho\",\n                \"last\": \"Kokko\"\n            },\n            \"location\": {\n                \"street\": {\n                    \"number\": 2026,\n                    \"name\": \"Hämeenkatu\"\n                },\n                \"city\": \"Helsinki\",\n                \"state\": \"North Karelia\",\n                \"country\": \"Finland\",\n                \"postcode\": 22028,\n                \"coordinates\": {\n                    \"latitude\": \"-20.4157\",\n                    \"longitude\": \"-131.4402\"\n                },\n                \"timezone\": {\n                    \"offset\": \"-11:00\",\n                    \"description\": \"Midway Island, Samoa\"\n                }\n            },\n            \"email\": \"juho.kokko@example.com\",\n            \"login\": {\n                \"uuid\": \"c4577963-b646-4503-b152-9c09bdbb89ea\",\n                \"username\": \"organictiger662\",\n                \"password\": \"lipstick\",\n                \"salt\": \"KXdJQZRQ\",\n                \"md5\": \"04d95c837118e66edffaa3f1d8270471\",\n                \"sha1\": \"0cdd68f5690fb477985ab13b844d80ce0067ba8e\",\n                \"sha256\": \"537334cd386989c438fa0aa52919a0d905ad6840737c229b061b5c96aacbd163\"\n            },\n            \"dob\": {\n                \"date\": \"1954-12-07T11:08:16.183Z\",\n                \"age\": 66\n            },\n            \"registered\": {\n                \"date\": \"2015-11-20T07:15:58.663Z\",\n                \"age\": 5\n            },\n            \"phone\": \"03-768-025\",\n            \"cell\": \"041-169-74-81\",\n            \"id\": {\n                \"name\": \"HETU\",\n                \"value\": \"NaNNA631undefined\"\n            },\n            \"picture\": {\n                \"large\": \"https://randomuser.me/api/portraits/men/91.jpg\",\n                \"medium\": \"https://randomuser.me/api/portraits/med/men/91.jpg\",\n                \"thumbnail\": \"https://randomuser.me/api/portraits/thumb/men/91.jpg\"\n            },\n            \"nat\": \"FI\"\n        },\n        {\n            \"gender\": \"male\",\n            \"name\": {\n                \"title\": \"Mr\",\n                \"first\": \"Jeppe\",\n                \"last\": \"Johansen\"\n            },\n            \"location\": {\n                \"street\": {\n                    \"number\": 3347,\n                    \"name\": \"Åbakkevej\"\n                },\n                \"city\": \"Esbjerg V\",\n                \"state\": \"Nordjylland\",\n                \"country\": \"Denmark\",\n                \"postcode\": 17928,\n                \"coordinates\": {\n                    \"latitude\": \"-55.7866\",\n                    \"longitude\": \"100.9054\"\n                },\n                \"timezone\": {\n                    \"offset\": \"-12:00\",\n                    \"description\": \"Eniwetok, Kwajalein\"\n                }\n            },\n            \"email\": \"jeppe.johansen@example.com\",\n            \"login\": {\n                \"uuid\": \"e2c9d039-229f-4b7e-aa40-506405f3a1c6\",\n                \"username\": \"tinyleopard981\",\n                \"password\": \"profit\",\n                \"salt\": \"Ux4x4GqC\",\n                \"md5\": \"600dd571533436dfa745fc91cf4a7e16\",\n                \"sha1\": \"4b20404defd3fd264ad9c7ff37ecc8716e88fae5\",\n                \"sha256\": \"ee30c748c2e18c49745c79523790dcfe6daebaaf29c6445dd38eb1d5700b941c\"\n            },\n            \"dob\": {\n                \"date\": \"1991-07-13T09:46:25.710Z\",\n                \"age\": 29\n            },\n            \"registered\": {\n                \"date\": \"2005-10-04T00:05:16.326Z\",\n                \"age\": 15\n            },\n            \"phone\": \"78421202\",\n            \"cell\": \"76407721\",\n            \"id\": {\n                \"name\": \"CPR\",\n                \"value\": \"130791-6006\"\n            },\n            \"picture\": {\n                \"large\": \"https://randomuser.me/api/portraits/men/46.jpg\",\n                \"medium\": \"https://randomuser.me/api/portraits/med/men/46.jpg\",\n                \"thumbnail\": \"https://randomuser.me/api/portraits/thumb/men/46.jpg\"\n            },\n            \"nat\": \"DK\"\n        },\n        {\n            \"gender\": \"female\",\n            \"name\": {\n                \"title\": \"Mrs\",\n                \"first\": \"Angelika\",\n                \"last\": \"Otterspeer\"\n            },\n            \"location\": {\n                \"street\": {\n                    \"number\": 1997,\n                    \"name\": \"Alfred Mozerhof\"\n                },\n                \"city\": \"Den Burg\",\n                \"state\": \"Limburg\",\n                \"country\": \"Netherlands\",\n                \"postcode\": 85758,\n                \"coordinates\": {\n                    \"latitude\": \"72.4778\",\n                    \"longitude\": \"-45.1249\"\n                },\n                \"timezone\": {\n                    \"offset\": \"-3:00\",\n                    \"description\": \"Brazil, Buenos Aires, Georgetown\"\n                }\n            },\n            \"email\": \"angelika.otterspeer@example.com\",\n            \"login\": {\n                \"uuid\": \"e847bd8f-d37b-4d63-a413-b971bc32a00a\",\n                \"username\": \"whiteduck227\",\n                \"password\": \"dte4uw\",\n                \"salt\": \"moyIGfmn\",\n                \"md5\": \"b16a79f097730a3724a882be8236acc4\",\n                \"sha1\": \"864434c10f8334960ec83fb04efe05ebbd3a7582\",\n                \"sha256\": \"304a27443ab057376dd34a36d41bb7d1ec84369aaf8925f8948eff93a800a8f6\"\n            },\n            \"dob\": {\n                \"date\": \"1952-04-20T10:25:39.301Z\",\n                \"age\": 68\n            },\n            \"registered\": {\n                \"date\": \"2018-07-19T04:14:18.889Z\",\n                \"age\": 2\n            },\n            \"phone\": \"(376)-813-4609\",\n            \"cell\": \"(907)-484-3743\",\n            \"id\": {\n                \"name\": \"BSN\",\n                \"value\": \"07187677\"\n            },\n            \"picture\": {\n                \"large\": \"https://randomuser.me/api/portraits/women/27.jpg\",\n                \"medium\": \"https://randomuser.me/api/portraits/med/women/27.jpg\",\n                \"thumbnail\": \"https://randomuser.me/api/portraits/thumb/women/27.jpg\"\n            },\n            \"nat\": \"NL\"\n        },\n        {\n            \"gender\": \"male\",\n            \"name\": {\n                \"title\": \"Mr\",\n                \"first\": \"Amável\",\n                \"last\": \"Rocha\"\n            },\n            \"location\": {\n                \"street\": {\n                    \"number\": 4164,\n                    \"name\": \"Rua Maranhão \"\n                },\n                \"city\": \"Suzano\",\n                \"state\": \"Amapá\",\n                \"country\": \"Brazil\",\n                \"postcode\": 92417,\n                \"coordinates\": {\n                    \"latitude\": \"44.5897\",\n                    \"longitude\": \"28.1860\"\n                },\n                \"timezone\": {\n                    \"offset\": \"-4:00\",\n                    \"description\": \"Atlantic Time (Canada), Caracas, La Paz\"\n                }\n            },\n            \"email\": \"amavel.rocha@example.com\",\n            \"login\": {\n                \"uuid\": \"08953027-d336-4981-b35e-322e45cad357\",\n                \"username\": \"goldenpeacock836\",\n                \"password\": \"voyager1\",\n                \"salt\": \"WP4r5nbq\",\n                \"md5\": \"394142589e53917a9f9b9e11588de063\",\n                \"sha1\": \"46fdc9b1d23752d96c1dc0e4241ce5202c56c4ab\",\n                \"sha256\": \"9be46892257524abf7a84e2fd887c98ad34aae237c8e387c4e5da1e08bd1f318\"\n            },\n            \"dob\": {\n                \"date\": \"1965-04-02T11:14:27.630Z\",\n                \"age\": 55\n            },\n            \"registered\": {\n                \"date\": \"2011-07-07T04:46:46.364Z\",\n                \"age\": 9\n            },\n            \"phone\": \"(71) 0335-4546\",\n            \"cell\": \"(16) 2291-9250\",\n            \"id\": {\n                \"name\": \"\",\n                \"value\": null\n            },\n            \"picture\": {\n                \"large\": \"https://randomuser.me/api/portraits/men/17.jpg\",\n                \"medium\": \"https://randomuser.me/api/portraits/med/men/17.jpg\",\n                \"thumbnail\": \"https://randomuser.me/api/portraits/thumb/men/17.jpg\"\n            },\n            \"nat\": \"BR\"\n        }\n    ]\n}"
-				}
-			]
-		},
-		{
-			"name": "/random-user/{id}",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "localhost:3000/v1/random-user/5f7dde11a2868db535eb5e5e",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"v1",
-						"random-user",
-						"5f7dde11a2868db535eb5e5e"
 					]
 				},
-				"description": "/random-user/{id}"
-			},
-			"response": [
 				{
 					"name": "/random-user/{id}",
-					"originalRequest": {
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
 						"method": "GET",
 						"header": [],
 						"body": {
@@ -280,130 +256,132 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:3000/v1/random-user/5f7dde11a2868db535eb5e5e",
+							"raw": "localhost:3000/v1/api/random-user/5f7dde11a2868db535eb5e5e",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
 								"v1",
+								"api",
 								"random-user",
 								"5f7dde11a2868db535eb5e5e"
 							]
-						}
+						},
+						"description": "/random-user/{id}"
 					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
+					"response": [
 						{
-							"key": "content-type",
-							"value": "application/json; charset=utf-8"
-						},
-						{
-							"key": "vary",
-							"value": "origin"
-						},
-						{
-							"key": "access-control-allow-credentials",
-							"value": "true"
-						},
-						{
-							"key": "access-control-expose-headers",
-							"value": "WWW-Authenticate,Server-Authorization"
-						},
-						{
-							"key": "cache-control",
-							"value": "no-cache"
-						},
-						{
-							"key": "content-length",
-							"value": "875"
-						},
-						{
-							"key": "accept-ranges",
-							"value": "bytes"
-						},
-						{
-							"key": "Date",
-							"value": "Wed, 07 Oct 2020 15:33:34 GMT"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						},
-						{
-							"key": "Keep-Alive",
-							"value": "timeout=5"
+							"name": "/random-user/{id}",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/v1/random-user/5f7dde11a2868db535eb5e5e",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"random-user",
+										"5f7dde11a2868db535eb5e5e"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin"
+								},
+								{
+									"key": "access-control-allow-credentials",
+									"value": "true"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "875"
+								},
+								{
+									"key": "accept-ranges",
+									"value": "bytes"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 07 Oct 2020 15:33:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"getRandomUser\",\n    \"result\": {\n        \"created_by\": \"2020-10-07T15:26:08.000Z\",\n        \"updated_by\": \"2020-10-07T15:26:08.000Z\",\n        \"_id\": \"5f7dde11a2868db535eb5e5e\",\n        \"gender\": \"female\",\n        \"name\": {\n            \"title\": \"Miss\",\n            \"first\": \"Gerdi\",\n            \"last\": \"Rogge\"\n        },\n        \"location\": {\n            \"street\": {\n                \"number\": 2936,\n                \"name\": \"Goethestraße\"\n            },\n            \"city\": \"Erlensee\",\n            \"state\": \"Baden-Württemberg\",\n            \"country\": \"Germany\",\n            \"postcode\": 39321,\n            \"coordinates\": {\n                \"latitude\": \"-33.1659\",\n                \"longitude\": \"-80.9125\"\n            },\n            \"timezone\": {\n                \"offset\": \"-11:00\",\n                \"description\": \"Midway Island, Samoa\"\n            }\n        },\n        \"email\": \"gerdi.rogge@example.com\",\n        \"dob\": {\n            \"date\": \"1991-01-27T08:02:25.833Z\",\n            \"age\": 29\n        },\n        \"registered\": {\n            \"date\": \"2017-07-13T06:21:53.524Z\",\n            \"age\": 3\n        },\n        \"phone\": \"0047-9266927\",\n        \"picture\": {\n            \"large\": \"https://randomuser.me/api/portraits/women/32.jpg\",\n            \"medium\": \"https://randomuser.me/api/portraits/med/women/32.jpg\",\n            \"thumbnail\": \"https://randomuser.me/api/portraits/thumb/women/32.jpg\"\n        },\n        \"__v\": 0\n    }\n}"
 						}
-					],
-					"cookie": [],
-					"body": "{\n    \"message\": \"getRandomUser\",\n    \"result\": {\n        \"created_by\": \"2020-10-07T15:26:08.000Z\",\n        \"updated_by\": \"2020-10-07T15:26:08.000Z\",\n        \"_id\": \"5f7dde11a2868db535eb5e5e\",\n        \"gender\": \"female\",\n        \"name\": {\n            \"title\": \"Miss\",\n            \"first\": \"Gerdi\",\n            \"last\": \"Rogge\"\n        },\n        \"location\": {\n            \"street\": {\n                \"number\": 2936,\n                \"name\": \"Goethestraße\"\n            },\n            \"city\": \"Erlensee\",\n            \"state\": \"Baden-Württemberg\",\n            \"country\": \"Germany\",\n            \"postcode\": 39321,\n            \"coordinates\": {\n                \"latitude\": \"-33.1659\",\n                \"longitude\": \"-80.9125\"\n            },\n            \"timezone\": {\n                \"offset\": \"-11:00\",\n                \"description\": \"Midway Island, Samoa\"\n            }\n        },\n        \"email\": \"gerdi.rogge@example.com\",\n        \"dob\": {\n            \"date\": \"1991-01-27T08:02:25.833Z\",\n            \"age\": 29\n        },\n        \"registered\": {\n            \"date\": \"2017-07-13T06:21:53.524Z\",\n            \"age\": 3\n        },\n        \"phone\": \"0047-9266927\",\n        \"picture\": {\n            \"large\": \"https://randomuser.me/api/portraits/women/32.jpg\",\n            \"medium\": \"https://randomuser.me/api/portraits/med/women/32.jpg\",\n            \"thumbnail\": \"https://randomuser.me/api/portraits/thumb/women/32.jpg\"\n        },\n        \"__v\": 0\n    }\n}"
-				}
-			]
-		},
-		{
-			"name": "/random-user/{id}",
-			"request": {
-				"method": "PUT",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"gender\": \"female\",\n    \"name\": {\n        \"title\": \"mrs\",\n        \"first\": \"aaa\",\n        \"last\": \"bbb\"\n    },\n    \"location\": {\n        \"street\": \"1111 test road\",\n        \"city\": \"hong kong\",\n        \"state\": \"hong kong\",\n        \"postcode\": \"000000\",\n        \"coordinates\": {\n            \"latitude\": \"20.9267\",\n            \"longitude\": \"-7.9310\"\n        },\n        \"timezone\": {\n            \"offset\": \"-3:30\",\n            \"description\": \"Newfoundland\"\n        }\n    },\n    \"email\": \"alex.gibson@test.com\",\n    \"dob\": {\n        \"date\": \"1993-07-20T09:44:18.674Z\",\n        \"age\": 30\n    },\n    \"registered\": {\n        \"date\": \"2002-05-21T10:59:49.966Z\",\n        \"age\": 18\n    },\n    \"phone\": \"011-962-7516\",\n    \"picture\": {\n        \"large\": \"https://randomuser.me/api/portraits/men/75.jpg\",\n        \"medium\": \"https://randomuser.me/api/portraits/med/men/75.jpg\",\n        \"thumbnail\": \"https://randomuser.me/api/portraits/thumb/men/75.jpg\"\n    }\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "localhost:3000/v1/random-user/5f7dde11a2868db535eb5e5e",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"v1",
-						"random-user",
-						"5f7dde11a2868db535eb5e5e"
 					]
 				},
-				"description": "/random-user/{id}"
-			},
-			"response": []
-		},
-		{
-			"name": "/random-user/{id}",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "localhost:3000/v1/random-user/5f7dde11a2868db535eb5e5e",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"v1",
-						"random-user",
-						"5f7dde11a2868db535eb5e5e"
-					]
-				},
-				"description": "/random-user/{id}"
-			},
-			"response": [
 				{
 					"name": "/random-user/{id}",
-					"originalRequest": {
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"gender\": \"female\",\n    \"name\": {\n        \"title\": \"mrs\",\n        \"first\": \"aaa\",\n        \"last\": \"bbb\"\n    },\n    \"location\": {\n        \"street\": \"1111 test road\",\n        \"city\": \"hong kong\",\n        \"state\": \"hong kong\",\n        \"postcode\": \"000000\",\n        \"coordinates\": {\n            \"latitude\": \"20.9267\",\n            \"longitude\": \"-7.9310\"\n        },\n        \"timezone\": {\n            \"offset\": \"-3:30\",\n            \"description\": \"Newfoundland\"\n        }\n    },\n    \"email\": \"alex.gibson@test.com\",\n    \"dob\": {\n        \"date\": \"1993-07-20T09:44:18.674Z\",\n        \"age\": 30\n    },\n    \"registered\": {\n        \"date\": \"2002-05-21T10:59:49.966Z\",\n        \"age\": 18\n    },\n    \"phone\": \"011-962-7516\",\n    \"picture\": {\n        \"large\": \"https://randomuser.me/api/portraits/men/75.jpg\",\n        \"medium\": \"https://randomuser.me/api/portraits/med/men/75.jpg\",\n        \"thumbnail\": \"https://randomuser.me/api/portraits/thumb/men/75.jpg\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/v1/api/random-user/5f7dde11a2868db535eb5e5e",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"api",
+								"random-user",
+								"5f7dde11a2868db535eb5e5e"
+							]
+						},
+						"description": "/random-user/{id}"
+					},
+					"response": []
+				},
+				{
+					"name": "/random-user/{id}",
+					"request": {
 						"method": "DELETE",
 						"header": [],
 						"body": {
@@ -416,63 +394,97 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:3000/v1/random-user/5f7dde11a2868db535eb5e5e",
+							"raw": "localhost:3000/v1/api/random-user/5f7dde11a2868db535eb5e5e",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
 								"v1",
+								"api",
 								"random-user",
 								"5f7dde11a2868db535eb5e5e"
 							]
-						}
+						},
+						"description": "/random-user/{id}"
 					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
+					"response": [
 						{
-							"key": "content-type",
-							"value": "application/json; charset=utf-8"
-						},
-						{
-							"key": "vary",
-							"value": "origin"
-						},
-						{
-							"key": "access-control-allow-credentials",
-							"value": "true"
-						},
-						{
-							"key": "access-control-expose-headers",
-							"value": "WWW-Authenticate,Server-Authorization"
-						},
-						{
-							"key": "cache-control",
-							"value": "no-cache"
-						},
-						{
-							"key": "content-length",
-							"value": "811"
-						},
-						{
-							"key": "Date",
-							"value": "Wed, 07 Oct 2020 15:47:39 GMT"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						},
-						{
-							"key": "Keep-Alive",
-							"value": "timeout=5"
+							"name": "/random-user/{id}",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/v1/random-user/5f7dde11a2868db535eb5e5e",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"random-user",
+										"5f7dde11a2868db535eb5e5e"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin"
+								},
+								{
+									"key": "access-control-allow-credentials",
+									"value": "true"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "811"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 07 Oct 2020 15:47:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"deleteRandomUserById\",\n    \"result\": {\n        \"created_by\": \"2020-10-07T15:26:08.000Z\",\n        \"updated_by\": \"2020-10-07T15:26:08.000Z\",\n        \"_id\": \"5f7dde11a2868db535eb5e5e\",\n        \"gender\": \"female\",\n        \"name\": {\n            \"title\": \"mrs\",\n            \"first\": \"aaa\",\n            \"last\": \"bbb\"\n        },\n        \"location\": {\n            \"street\": \"1111 test road\",\n            \"city\": \"hong kong\",\n            \"state\": \"hong kong\",\n            \"postcode\": \"000000\",\n            \"coordinates\": {\n                \"latitude\": \"20.9267\",\n                \"longitude\": \"-7.9310\"\n            },\n            \"timezone\": {\n                \"offset\": \"-3:30\",\n                \"description\": \"Newfoundland\"\n            }\n        },\n        \"email\": \"alex.gibson@test.com\",\n        \"dob\": {\n            \"date\": \"1993-07-20T09:44:18.674Z\",\n            \"age\": 30\n        },\n        \"registered\": {\n            \"date\": \"2002-05-21T10:59:49.966Z\",\n            \"age\": 18\n        },\n        \"phone\": \"011-962-7516\",\n        \"picture\": {\n            \"large\": \"https://randomuser.me/api/portraits/men/75.jpg\",\n            \"medium\": \"https://randomuser.me/api/portraits/med/men/75.jpg\",\n            \"thumbnail\": \"https://randomuser.me/api/portraits/thumb/men/75.jpg\"\n        },\n        \"__v\": 0\n    }\n}"
 						}
-					],
-					"cookie": [],
-					"body": "{\n    \"message\": \"deleteRandomUserById\",\n    \"result\": {\n        \"created_by\": \"2020-10-07T15:26:08.000Z\",\n        \"updated_by\": \"2020-10-07T15:26:08.000Z\",\n        \"_id\": \"5f7dde11a2868db535eb5e5e\",\n        \"gender\": \"female\",\n        \"name\": {\n            \"title\": \"mrs\",\n            \"first\": \"aaa\",\n            \"last\": \"bbb\"\n        },\n        \"location\": {\n            \"street\": \"1111 test road\",\n            \"city\": \"hong kong\",\n            \"state\": \"hong kong\",\n            \"postcode\": \"000000\",\n            \"coordinates\": {\n                \"latitude\": \"20.9267\",\n                \"longitude\": \"-7.9310\"\n            },\n            \"timezone\": {\n                \"offset\": \"-3:30\",\n                \"description\": \"Newfoundland\"\n            }\n        },\n        \"email\": \"alex.gibson@test.com\",\n        \"dob\": {\n            \"date\": \"1993-07-20T09:44:18.674Z\",\n            \"age\": 30\n        },\n        \"registered\": {\n            \"date\": \"2002-05-21T10:59:49.966Z\",\n            \"age\": 18\n        },\n        \"phone\": \"011-962-7516\",\n        \"picture\": {\n            \"large\": \"https://randomuser.me/api/portraits/men/75.jpg\",\n            \"medium\": \"https://randomuser.me/api/portraits/med/men/75.jpg\",\n            \"thumbnail\": \"https://randomuser.me/api/portraits/thumb/men/75.jpg\"\n        },\n        \"__v\": 0\n    }\n}"
+					]
 				}
-			]
+			],
+			"description": "/random-user",
+			"protocolProfileBehavior": {}
 		}
 	],
 	"protocolProfileBehavior": {}
