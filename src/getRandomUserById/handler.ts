@@ -14,14 +14,23 @@ export const getRandomUserById: Handler = async (event: any) => {
   const id = event.pathParameters.id;
   if (id) {
     const randomUser = await RandomUser.findById({ _id: id });
-
-    response = {
-      statusCode: 200,
-      body: JSON.stringify({
-        message: 'getRandomUser',
-        result: randomUser,
-      }),
-    };
+    if (randomUser) {
+      response = {
+        statusCode: 200,
+        body: JSON.stringify({
+          message: 'getRandomUser',
+          result: randomUser,
+        }),
+      };
+    } else {
+      response = {
+        statusCode: 200,
+        body: JSON.stringify({
+          message: 'getRandomUser',
+          result: {},
+        }),
+      };
+    }
   }
 
   return response;
