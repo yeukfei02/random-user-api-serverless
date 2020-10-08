@@ -1,6 +1,6 @@
 service: random-user-api-serverless
 
-frameworkVersion: '2'
+frameworkVersion: "2"
 
 provider:
   name: aws
@@ -15,7 +15,7 @@ functions:
     handler: src/main/handler.getMain
     events:
       - http:
-          path: /
+          path: /api
           method: get
           cors: true
 
@@ -23,7 +23,7 @@ functions:
     handler: src/createRandomUser/handler.createRandomUser
     events:
       - http:
-          path: /random-user
+          path: /api/random-user
           method: post
           cors: true
 
@@ -31,7 +31,7 @@ functions:
     handler: src/getRandomUser/handler.getRandomUser
     events:
       - http:
-          path: /random-user
+          path: /api/random-user
           method: get
           cors: true
 
@@ -39,7 +39,7 @@ functions:
     handler: src/getRandomUserById/handler.getRandomUserById
     events:
       - http:
-          path: /random-user/{id}
+          path: /api/random-user/{id}
           method: get
           cors: true
 
@@ -47,7 +47,7 @@ functions:
     handler: src/updateRandomUserById/handler.updateRandomUserById
     events:
       - http:
-          path: /random-user/{id}
+          path: /api/random-user/{id}
           method: put
           cors: true
 
@@ -55,7 +55,7 @@ functions:
     handler: src/deleteRandomUserById/handler.deleteRandomUserById
     events:
       - http:
-          path: /random-user/{id}
+          path: /api/random-user/{id}
           method: delete
           cors: true
 
