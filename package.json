@@ -6,7 +6,6 @@
   "author": "Donald Wu <yeukfei02@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "aws-lambda": "^1.0.6",
     "axios": "0.19.2",
     "dotenv": "^8.2.0",
     "lodash": "^4.17.20",
@@ -23,6 +22,7 @@
     "@types/mongoose": "^5.7.36",
     "@typescript-eslint/eslint-plugin": "^4.4.0",
     "@typescript-eslint/parser": "^4.4.0",
+    "aws-lambda": "^1.0.6",
     "codecov": "^3.8.0",
     "eslint": "^7.10.0",
     "eslint-config-prettier": "^6.12.0",
