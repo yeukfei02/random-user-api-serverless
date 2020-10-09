@@ -12,10 +12,6 @@ provider:
   environment:
     NODE_ENV: production
 
-package:
-  exclude:
-    - node_modules/**
-
 functions:
   main:
     handler: src/main/handler.getMain
