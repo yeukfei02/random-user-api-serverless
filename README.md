@@ -4,6 +4,8 @@ random-user-api-serverless
 
 documentation: https://documenter.getpostman.com/view/3827865/TVRj485z
 
+api url: https://l96ge0m3o8.execute-api.ap-southeast-1.amazonaws.com/v1/api
+
 ## Requirement:
 
 - install yarn
