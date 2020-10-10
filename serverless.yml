@@ -10,7 +10,7 @@ provider:
   stage: v1
   region: ap-southeast-1
   environment:
-    NODE_ENV: production
+    NODE_ENV: development
 
 functions:
   main:
@@ -19,6 +19,22 @@ functions:
       - http:
           path: /api
           method: get
+          cors: true
+  
+  signup:
+    handler: src/signup/handler.signup
+    events:
+      - http:
+          path: /api/user/signup
+          method: post
+          cors: true
+  
+  login:
+    handler: src/login/handler.login
+    events:
+      - http:
+          path: /api/user/login
+          method: post
           cors: true
 
   createRandomUser:
