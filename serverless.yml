@@ -10,7 +10,7 @@ provider:
   stage: v1
   region: ap-southeast-1
   environment:
-    NODE_ENV: development
+    NODE_ENV: production
 
 functions:
   main:
@@ -37,6 +37,9 @@ functions:
           method: post
           cors: true
 
+  isUserLoggedIn:
+    handler: src/isUserLoggedIn/handler.isUserLoggedIn
+
   createRandomUser:
     handler: src/createRandomUser/handler.createRandomUser
     events:
@@ -44,6 +47,8 @@ functions:
           path: /api/random-user
           method: post
           cors: true
+          authorizer:
+            name: isUserLoggedIn
 
   getRandomUser:
     handler: src/getRandomUser/handler.getRandomUser
@@ -52,6 +57,8 @@ functions:
           path: /api/random-user
           method: get
           cors: true
+          authorizer:
+            name: isUserLoggedIn
 
   getRandomUserById:
     handler: src/getRandomUserById/handler.getRandomUserById
@@ -60,6 +67,8 @@ functions:
           path: /api/random-user/{id}
           method: get
           cors: true
+          authorizer:
+            name: isUserLoggedIn
 
   updateRandomUserById:
     handler: src/updateRandomUserById/handler.updateRandomUserById
@@ -68,6 +77,8 @@ functions:
           path: /api/random-user/{id}
           method: put
           cors: true
+          authorizer:
+            name: isUserLoggedIn
 
   deleteRandomUserById:
     handler: src/deleteRandomUserById/handler.deleteRandomUserById
@@ -76,6 +87,8 @@ functions:
           path: /api/random-user/{id}
           method: delete
           cors: true
+          authorizer:
+            name: isUserLoggedIn
 
 plugins:
   - serverless-plugin-typescript
