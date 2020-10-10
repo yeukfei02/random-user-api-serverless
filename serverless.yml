@@ -49,7 +49,6 @@ functions:
           cors: true
           # authorizer:
           #   name: isUserLoggedIn
-          #   identitySource: method.request.header.Authorization
 
   getRandomUser:
     handler: src/getRandomUser/handler.getRandomUser
@@ -60,7 +59,6 @@ functions:
           cors: true
           # authorizer:
           #   name: isUserLoggedIn
-          #   identitySource: method.request.header.Authorization
 
   getRandomUserById:
     handler: src/getRandomUserById/handler.getRandomUserById
@@ -71,7 +69,6 @@ functions:
           cors: true
           # authorizer:
           #   name: isUserLoggedIn
-          #   identitySource: method.request.header.Authorization
 
   updateRandomUserById:
     handler: src/updateRandomUserById/handler.updateRandomUserById
@@ -82,7 +79,6 @@ functions:
           cors: true
           # authorizer:
           #   name: isUserLoggedIn
-          #   identitySource: method.request.header.Authorization
 
   deleteRandomUserById:
     handler: src/deleteRandomUserById/handler.deleteRandomUserById
@@ -93,7 +89,6 @@ functions:
           cors: true
           # authorizer:
           #   name: isUserLoggedIn
-          #   identitySource: method.request.header.Authorization
 
 plugins:
   - serverless-plugin-typescript

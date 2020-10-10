@@ -1,9 +1,6 @@
 import lambdaTester from 'lambda-tester';
 import RandomUser from '../model/randomUser';
 
-import env from 'dotenv';
-env.config();
-
 import { connectDB } from '../db/db';
 
 connectDB();
@@ -14,8 +11,6 @@ export const getRandomUserByIdTest = (): void => {
   describe('getRandomUserById test', () => {
     test('getRandomUserById test', async () => {
       const randomUser = await RandomUser.findOne().sort({ created_by: -1 });
-      console.log('randomUser = ', randomUser);
-
       if (randomUser) {
         const id = randomUser._id;
 
