@@ -2,10 +2,8 @@ import { Handler } from 'aws-lambda';
 import axios from 'axios';
 import _ from 'lodash';
 import mongoose from 'mongoose';
-import RandomUser from '../../model/randomUser';
 
-import env from 'dotenv';
-env.config();
+import RandomUser from '../../model/randomUser';
 
 import { connectDB } from '../../db/db';
 

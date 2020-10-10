@@ -7,13 +7,249 @@
 	},
 	"item": [
 		{
-			"name": "/random-user",
+			"name": "user",
+			"item": [
+				{
+					"name": "/signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"test@email.com\",\n\t\"password\": \"test\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/v1/api/user/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"api",
+								"user",
+								"signup"
+							]
+						},
+						"description": "/signup"
+					},
+					"response": [
+						{
+							"name": "/signup",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"email\": \"test@email.com\",\n\t\"password\": \"test\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/v1/api/user/signup",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"api",
+										"user",
+										"signup"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin"
+								},
+								{
+									"key": "access-control-allow-credentials",
+									"value": "true"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "20"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Oct 2020 05:21:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"signup\"\n}"
+						}
+					]
+				},
+				{
+					"name": "/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"test@email.com\",\n\t\"password\": \"test\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/v1/api/user/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"api",
+								"user",
+								"login"
+							]
+						},
+						"description": "/login"
+					},
+					"response": [
+						{
+							"name": "/login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"email\": \"test@email.com\",\n\t\"password\": \"test\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/v1/api/user/login",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"api",
+										"user",
+										"login"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin"
+								},
+								{
+									"key": "access-control-allow-credentials",
+									"value": "true"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "217"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Oct 2020 05:21:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"login\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZlODY0NDU1LWE4MmUtNGVmOC05MTM5LTU5OWU1NGQ4YzU0NCIsImlhdCI6MTYwMjMwNzI3NSwiZXhwIjoxNjAyMzkzNjc1fQ.Lb8lIg_Vbk0HLxZYaWbQ4A8QFkfkAqBo98B8ZUfN6sM\"\n}"
+						}
+					]
+				}
+			],
+			"description": "user",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "0811b842-8152-4d7a-b310-cdaec96e34b2",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "b2839883-2a89-4575-a08a-366aed3211be",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "random-user",
 			"item": [
 				{
 					"name": "/random-user",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdjZTNkOGIzLTQ4YTgtNGU1YS05MmVkLWU3NGQ4M2Q2OTM5MiIsImlhdCI6MTYwMjMxMzI2NiwiZXhwIjoxNjAyMzk5NjY2fQ.7HPpaKkYAQP61ElGkCAwNHW6_dBYwYFV5wYdl0S7cBI",
+								"type": "text",
+								"disabled": true
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\n    \"gender\": \"male\",\n    \"name\": {\n        \"title\": \"mr\",\n        \"first\": \"brad\",\n        \"last\": \"gibson\"\n    },\n    \"location\": {\n        \"street\": \"9278 new road\",\n        \"city\": \"kilcoole\",\n        \"state\": \"waterford\",\n        \"postcode\": \"93027\",\n        \"coordinates\": {\n            \"latitude\": \"20.9267\",\n            \"longitude\": \"-7.9310\"\n        },\n        \"timezone\": {\n            \"offset\": \"-3:30\",\n            \"description\": \"Newfoundland\"\n        }\n    },\n    \"email\": \"brad.gibson@example.com\",\n    \"dob\": {\n        \"date\": \"1993-07-20T09:44:18.674Z\",\n        \"age\": 26\n    },\n    \"registered\": {\n        \"date\": \"2002-05-21T10:59:49.966Z\",\n        \"age\": 17\n    },\n    \"phone\": \"011-962-7516\",\n    \"picture\": {\n        \"large\": \"https://randomuser.me/api/portraits/men/75.jpg\",\n        \"medium\": \"https://randomuser.me/api/portraits/med/men/75.jpg\",\n        \"thumbnail\": \"https://randomuser.me/api/portraits/thumb/men/75.jpg\"\n    }\n}",
@@ -117,7 +353,14 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdjZTNkOGIzLTQ4YTgtNGU1YS05MmVkLWU3NGQ4M2Q2OTM5MiIsImlhdCI6MTYwMjMxMzI2NiwiZXhwIjoxNjAyMzk5NjY2fQ.7HPpaKkYAQP61ElGkCAwNHW6_dBYwYFV5wYdl0S7cBI",
+								"type": "text",
+								"disabled": true
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "",
@@ -245,7 +488,14 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdjZTNkOGIzLTQ4YTgtNGU1YS05MmVkLWU3NGQ4M2Q2OTM5MiIsImlhdCI6MTYwMjMxMzI2NiwiZXhwIjoxNjAyMzk5NjY2fQ.7HPpaKkYAQP61ElGkCAwNHW6_dBYwYFV5wYdl0S7cBI",
+								"type": "text",
+								"disabled": true
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "",
@@ -352,7 +602,14 @@
 					"name": "/random-user/{id}",
 					"request": {
 						"method": "PUT",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdjZTNkOGIzLTQ4YTgtNGU1YS05MmVkLWU3NGQ4M2Q2OTM5MiIsImlhdCI6MTYwMjMxMzI2NiwiZXhwIjoxNjAyMzk5NjY2fQ.7HPpaKkYAQP61ElGkCAwNHW6_dBYwYFV5wYdl0S7cBI",
+								"type": "text",
+								"disabled": true
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\n    \"gender\": \"female\",\n    \"name\": {\n        \"title\": \"mrs\",\n        \"first\": \"aaa\",\n        \"last\": \"bbb\"\n    },\n    \"location\": {\n        \"street\": \"1111 test road\",\n        \"city\": \"hong kong\",\n        \"state\": \"hong kong\",\n        \"postcode\": \"000000\",\n        \"coordinates\": {\n            \"latitude\": \"20.9267\",\n            \"longitude\": \"-7.9310\"\n        },\n        \"timezone\": {\n            \"offset\": \"-3:30\",\n            \"description\": \"Newfoundland\"\n        }\n    },\n    \"email\": \"alex.gibson@test.com\",\n    \"dob\": {\n        \"date\": \"1993-07-20T09:44:18.674Z\",\n        \"age\": 30\n    },\n    \"registered\": {\n        \"date\": \"2002-05-21T10:59:49.966Z\",\n        \"age\": 18\n    },\n    \"phone\": \"011-962-7516\",\n    \"picture\": {\n        \"large\": \"https://randomuser.me/api/portraits/men/75.jpg\",\n        \"medium\": \"https://randomuser.me/api/portraits/med/men/75.jpg\",\n        \"thumbnail\": \"https://randomuser.me/api/portraits/thumb/men/75.jpg\"\n    }\n}",
@@ -383,7 +640,14 @@
 					"name": "/random-user/{id}",
 					"request": {
 						"method": "DELETE",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdjZTNkOGIzLTQ4YTgtNGU1YS05MmVkLWU3NGQ4M2Q2OTM5MiIsImlhdCI6MTYwMjMxMzI2NiwiZXhwIjoxNjAyMzk5NjY2fQ.7HPpaKkYAQP61ElGkCAwNHW6_dBYwYFV5wYdl0S7cBI",
+								"type": "text",
+								"disabled": true
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "",
@@ -483,7 +747,29 @@
 					]
 				}
 			],
-			"description": "/random-user",
+			"description": "random-user",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "4f3ebc0c-d4da-4400-9645-d09ec14fcf76",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "ce320e7a-7eda-4e70-af3e-23bbcbc7abe8",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
 			"protocolProfileBehavior": {}
 		}
 	],

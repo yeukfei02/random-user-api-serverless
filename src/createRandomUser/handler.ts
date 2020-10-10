@@ -1,9 +1,7 @@
 import { Handler } from 'aws-lambda';
 import mongoose from 'mongoose';
-import RandomUser from '../../model/randomUser';
 
-import env from 'dotenv';
-env.config();
+import RandomUser from '../../model/randomUser';
 
 import { connectDB } from '../../db/db';
 
@@ -13,7 +11,6 @@ export const createRandomUser: Handler = async (event: any) => {
   let response = {};
 
   const body = JSON.parse(event.body);
-
   if (body) {
     const gender = body.gender;
     const name = body.name;

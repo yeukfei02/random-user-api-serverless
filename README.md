@@ -17,6 +17,8 @@ api url: https://l96ge0m3o8.execute-api.ap-southeast-1.amazonaws.com/v1/api
 ```
 // run function
 $ serverless invoke local --function main
+$ serverless invoke local --function signup --path ./data/signup.json
+$ serverless invoke local --function login --path ./data/login.json
 $ serverless invoke local --function createRandomUser --path ./data/createRandomUser.json
 $ serverless invoke local --function getRandomUser --path ./data/getRandomUser.json
 $ serverless invoke local --function getRandomUserById --path ./data/getRandomUserById.json

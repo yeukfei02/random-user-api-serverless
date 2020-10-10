@@ -1,8 +1,6 @@
 import { Handler } from 'aws-lambda';
-import RandomUser from '../../model/randomUser';
 
-import env from 'dotenv';
-env.config();
+import RandomUser from '../../model/randomUser';
 
 import { connectDB } from '../../db/db';
 

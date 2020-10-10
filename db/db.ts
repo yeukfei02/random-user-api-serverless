@@ -1,5 +1,8 @@
 import mongoose from 'mongoose';
 
+import env from 'dotenv';
+env.config();
+
 export const connectDB = async (): Promise<void> => {
   if (process.env.NODE_ENV === 'development') {
     // mongo local db

@@ -20,6 +20,25 @@ functions:
           path: /api
           method: get
           cors: true
+  
+  signup:
+    handler: src/signup/handler.signup
+    events:
+      - http:
+          path: /api/user/signup
+          method: post
+          cors: true
+  
+  login:
+    handler: src/login/handler.login
+    events:
+      - http:
+          path: /api/user/login
+          method: post
+          cors: true
+
+  isUserLoggedIn:
+    handler: src/isUserLoggedIn/handler.isUserLoggedIn
 
   createRandomUser:
     handler: src/createRandomUser/handler.createRandomUser
@@ -28,6 +47,9 @@ functions:
           path: /api/random-user
           method: post
           cors: true
+          # authorizer:
+          #   name: isUserLoggedIn
+          #   identitySource: method.request.header.Authorization
 
   getRandomUser:
     handler: src/getRandomUser/handler.getRandomUser
@@ -36,6 +58,9 @@ functions:
           path: /api/random-user
           method: get
           cors: true
+          # authorizer:
+          #   name: isUserLoggedIn
+          #   identitySource: method.request.header.Authorization
 
   getRandomUserById:
     handler: src/getRandomUserById/handler.getRandomUserById
@@ -44,6 +69,9 @@ functions:
           path: /api/random-user/{id}
           method: get
           cors: true
+          # authorizer:
+          #   name: isUserLoggedIn
+          #   identitySource: method.request.header.Authorization
 
   updateRandomUserById:
     handler: src/updateRandomUserById/handler.updateRandomUserById
@@ -52,6 +80,9 @@ functions:
           path: /api/random-user/{id}
           method: put
           cors: true
+          # authorizer:
+          #   name: isUserLoggedIn
+          #   identitySource: method.request.header.Authorization
 
   deleteRandomUserById:
     handler: src/deleteRandomUserById/handler.deleteRandomUserById
@@ -60,6 +91,9 @@ functions:
           path: /api/random-user/{id}
           method: delete
           cors: true
+          # authorizer:
+          #   name: isUserLoggedIn
+          #   identitySource: method.request.header.Authorization
 
 plugins:
   - serverless-plugin-typescript
