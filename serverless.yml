@@ -37,8 +37,8 @@ functions:
           method: post
           cors: true
 
-  isUserLoggedIn:
-    handler: src/isUserLoggedIn/handler.isUserLoggedIn
+  authorize:
+    handler: src/authorize/handler.authorize
 
   createRandomUser:
     handler: src/createRandomUser/handler.createRandomUser
@@ -47,9 +47,8 @@ functions:
           path: /api/random-user
           method: post
           cors: true
-          # authorizer:
-          #   name: isUserLoggedIn
-          #   identitySource: method.request.header.Authorization
+          authorizer:
+            name: authorize
 
   getRandomUser:
     handler: src/getRandomUser/handler.getRandomUser
@@ -58,9 +57,8 @@ functions:
           path: /api/random-user
           method: get
           cors: true
-          # authorizer:
-          #   name: isUserLoggedIn
-          #   identitySource: method.request.header.Authorization
+          authorizer:
+            name: authorize
 
   getRandomUserById:
     handler: src/getRandomUserById/handler.getRandomUserById
@@ -69,9 +67,8 @@ functions:
           path: /api/random-user/{id}
           method: get
           cors: true
-          # authorizer:
-          #   name: isUserLoggedIn
-          #   identitySource: method.request.header.Authorization
+          authorizer:
+            name: authorize
 
   updateRandomUserById:
     handler: src/updateRandomUserById/handler.updateRandomUserById
@@ -80,9 +77,8 @@ functions:
           path: /api/random-user/{id}
           method: put
           cors: true
-          # authorizer:
-          #   name: isUserLoggedIn
-          #   identitySource: method.request.header.Authorization
+          authorizer:
+            name: authorize
 
   deleteRandomUserById:
     handler: src/deleteRandomUserById/handler.deleteRandomUserById
@@ -91,9 +87,8 @@ functions:
           path: /api/random-user/{id}
           method: delete
           cors: true
-          # authorizer:
-          #   name: isUserLoggedIn
-          #   identitySource: method.request.header.Authorization
+          authorizer:
+            name: authorize
 
 plugins:
   - serverless-plugin-typescript
