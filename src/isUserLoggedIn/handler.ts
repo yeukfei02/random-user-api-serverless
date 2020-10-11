@@ -8,6 +8,10 @@ export const isUserLoggedIn: Handler = async (event: any, context: any, callback
   const token = event.authorizationToken.replace('Bearer ', '');
   const methodArn = event.methodArn;
 
+  if (!token || !methodArn) {
+    return callback(null, 'Unauthorized');
+  }
+
   const decoded = jwt.verify(token, process.env.JWT_SECRET as string) as any;
   if (decoded) {
     return callback(null, generateAuthResponse(decoded.id, 'Allow', methodArn));
