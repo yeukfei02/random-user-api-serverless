@@ -1,6 +1,6 @@
 {
   "name": "random-user-api-serverless",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "main": "app.js",
   "repository": "https://github.com/yeukfei02/random-user-api-serverless.git",
   "author": "Donald Wu <yeukfei02@gmail.com>",
