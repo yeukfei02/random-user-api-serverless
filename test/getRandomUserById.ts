@@ -1,18 +1,15 @@
 import lambdaTester from 'lambda-tester';
 import RandomUser from '../model/randomUser';
 
-import { connectDB } from '../db/db';
-
-connectDB();
-
 import { getRandomUserById } from '../src/getRandomUserById/handler';
 
 export const getRandomUserByIdTest = (): void => {
   describe('getRandomUserById test', () => {
     test('getRandomUserById test', async () => {
-      const randomUser = await RandomUser.findOne().sort({ created_by: -1 });
+      const randomUser = await RandomUser.scan().exec();
       if (randomUser) {
-        const id = randomUser._id;
+        const lastRandomUser = randomUser[randomUser.length - 1] as any;
+        const id = lastRandomUser.id;
 
         lambdaTester(getRandomUserById)
           .event({ pathParameters: { id: id } })

@@ -1,18 +1,15 @@
 import lambdaTester from 'lambda-tester';
 import RandomUser from '../model/randomUser';
 
-import { connectDB } from '../db/db';
-
-connectDB();
-
 import { deleteRandomUserById } from '../src/deleteRandomUserById/handler';
 
 export const deleteRandomUserByIdTest = (): void => {
   describe('deleteRandomUserById test', () => {
     test('deleteRandomUserById test', async () => {
-      const randomUser = await RandomUser.findOne().sort({ created_by: -1 });
+      const randomUser = await RandomUser.scan().exec();
       if (randomUser) {
-        const id = randomUser._id;
+        const lastRandomUser = randomUser[randomUser.length - 1] as any;
+        const id = lastRandomUser.id;
 
         lambdaTester(deleteRandomUserById)
           .event({ pathParameters: { id: id } })
