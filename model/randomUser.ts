@@ -1,24 +1,77 @@
-import mongoose from 'mongoose';
-import moment from 'moment';
-import momenttz from 'moment-timezone';
-
-const userTimezone = momenttz.tz.guess();
-const currentDateWithTimezone = moment.tz(moment().format(), userTimezone);
-
-const randomUserSchema = new mongoose.Schema({
-  _id: mongoose.Schema.Types.ObjectId,
-  gender: { type: String, required: true },
-  name: { type: mongoose.Schema.Types.Mixed, required: true },
-  location: { type: mongoose.Schema.Types.Mixed, required: true },
-  email: { type: String, required: true },
-  dob: { type: mongoose.Schema.Types.Mixed, required: true },
-  registered: { type: mongoose.Schema.Types.Mixed, required: true },
-  phone: { type: String, required: true },
-  picture: { type: mongoose.Schema.Types.Mixed, required: true },
-  created_by: { type: Date, default: currentDateWithTimezone },
-  updated_by: { type: Date, default: currentDateWithTimezone },
+import dynamoose from 'dynamoose';
+dynamoose.aws.sdk.config.update({
+  accessKeyId: process.env.AWS_ACCESS_KEY,
+  secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+  region: 'ap-southeast-1',
 });
 
-const randomUserModel = mongoose.model('RandomUser', randomUserSchema);
+const randomUserSchema = new dynamoose.Schema(
+  {
+    id: String,
+    gender: String,
+    name: {
+      type: Object,
+      schema: {
+        title: String,
+        first: String,
+        last: String,
+      },
+    },
+    location: {
+      type: Object,
+      schema: {
+        street: String,
+        city: String,
+        state: String,
+        postcode: String,
+        coordinates: {
+          type: Object,
+          schema: {
+            latitude: String,
+            longitude: String,
+          },
+        },
+        timezone: {
+          type: Object,
+          schema: {
+            offset: String,
+            description: String,
+          },
+        },
+      },
+    },
+    email: String,
+    dob: {
+      type: Object,
+      schema: {
+        date: String,
+        age: Number,
+      },
+    },
+    registered: {
+      type: Object,
+      schema: {
+        date: String,
+        age: Number,
+      },
+    },
+    phone: String,
+    picture: {
+      type: Object,
+      schema: {
+        large: String,
+        medium: String,
+        thumbnail: String,
+      },
+    },
+  },
+  {
+    timestamps: {
+      createdAt: 'createdAt',
+      updatedAt: 'updatedAt',
+    },
+  },
+);
+const randomUserModel = dynamoose.model('RandomUser', randomUserSchema);
 
 export default randomUserModel;
