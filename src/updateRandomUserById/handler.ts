@@ -2,10 +2,6 @@ import { Handler } from 'aws-lambda';
 
 import RandomUser from '../../model/randomUser';
 
-import { connectDB } from '../../db/db';
-
-connectDB();
-
 export const updateRandomUserById: Handler = async (event: any) => {
   let response = {};
 
@@ -22,7 +18,8 @@ export const updateRandomUserById: Handler = async (event: any) => {
     const phone = body.phone;
     const picture = body.picture;
 
-    const data = {
+    const result = await RandomUser.update({
+      id: id,
       gender: gender,
       name: name,
       location: location,
@@ -31,8 +28,7 @@ export const updateRandomUserById: Handler = async (event: any) => {
       registered: registered,
       phone: phone,
       picture: picture,
-    };
-    const result = await RandomUser.findOneAndUpdate({ _id: id }, { $set: data });
+    });
 
     response = {
       statusCode: 200,

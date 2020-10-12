@@ -1,18 +1,23 @@
-import mongoose from 'mongoose';
-import moment from 'moment';
-import momenttz from 'moment-timezone';
-
-const userTimezone = momenttz.tz.guess();
-const currentDateWithTimezone = moment.tz(moment().format(), userTimezone);
-
-const userSchema = new mongoose.Schema({
-  _id: mongoose.Schema.Types.ObjectId,
-  email: { type: String, required: true },
-  password: { type: String, required: true },
-  created_by: { type: Date, default: currentDateWithTimezone },
-  updated_by: { type: Date, default: currentDateWithTimezone },
+import dynamoose from 'dynamoose';
+dynamoose.aws.sdk.config.update({
+  accessKeyId: process.env.AWS_ACCESS_KEY,
+  secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+  region: 'ap-southeast-1',
 });
 
-const userModel = mongoose.model('User', userSchema);
+const userSchema = new dynamoose.Schema(
+  {
+    id: String,
+    email: String,
+    password: String,
+  },
+  {
+    timestamps: {
+      createdAt: 'createdAt',
+      updatedAt: 'updatedAt',
+    },
+  },
+);
+const userModel = dynamoose.model('User', userSchema);
 
 export default userModel;

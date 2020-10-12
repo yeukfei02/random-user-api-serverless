@@ -8,10 +8,6 @@ import User from '../../model/user';
 import env from 'dotenv';
 env.config();
 
-import { connectDB } from '../../db/db';
-
-connectDB();
-
 export const login: Handler = async (event: any) => {
   let response = {};
 
@@ -21,9 +17,11 @@ export const login: Handler = async (event: any) => {
     const password = body.password;
 
     if (email && password) {
-      const user = await User.findOne({ email: email });
-      if (user) {
-        const userPasswordFromDB = user.get('password');
+      const user: any = await User.scan({ email: { eq: email } }).exec();
+      console.log('user = ', user);
+
+      if (user.count === 1) {
+        const userPasswordFromDB = user[0].password;
         if (bcrypt.compareSync(password, userPasswordFromDB)) {
           const token = jwt.sign(
             {

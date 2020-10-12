@@ -1,12 +1,8 @@
 import { Handler } from 'aws-lambda';
 import bcrypt from 'bcryptjs';
-import mongoose from 'mongoose';
+import { v4 as uuidv4 } from 'uuid';
 
 import User from '../../model/user';
-
-import { connectDB } from '../../db/db';
-
-connectDB();
 
 export const signup: Handler = async (event: any) => {
   let response = {};
@@ -17,10 +13,14 @@ export const signup: Handler = async (event: any) => {
     const password = bcrypt.hashSync(body.password, 10);
 
     if (email && password) {
-      const record = await User.findOne({ email: email });
-      if (!record) {
+      const record = await User.scan({ email: { eq: email } })
+        .count()
+        .exec();
+      console.log('record = ', record);
+
+      if (record.count === 0) {
         const user = new User({
-          _id: new mongoose.Types.ObjectId(),
+          id: uuidv4(),
           email: email,
           password: password,
         });

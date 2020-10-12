@@ -1,11 +1,7 @@
 import { Handler } from 'aws-lambda';
-import mongoose from 'mongoose';
+import { v4 as uuidv4 } from 'uuid';
 
 import RandomUser from '../../model/randomUser';
-
-import { connectDB } from '../../db/db';
-
-connectDB();
 
 export const createRandomUser: Handler = async (event: any) => {
   let response = {};
@@ -22,7 +18,7 @@ export const createRandomUser: Handler = async (event: any) => {
     const picture = body.picture;
 
     const randomUser = new RandomUser({
-      _id: new mongoose.Types.ObjectId(),
+      id: uuidv4(),
       gender: gender,
       name: name,
       location: location,
