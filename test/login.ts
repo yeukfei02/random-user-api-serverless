@@ -10,8 +10,8 @@ export const loginTest = (): void => {
         password: 'test',
       };
 
-      lambdaTester(login)
-        .event({ body: bodyData })
+      return lambdaTester(login)
+        .event({ body: JSON.stringify(bodyData) })
         .expectResult((result: any) => {
           console.log('result = ', result);
           expect(result).toBeDefined();

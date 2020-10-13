@@ -8,10 +8,11 @@ export const getRandomUserByIdTest = (): void => {
     test('getRandomUserById test', async () => {
       const randomUser = await RandomUser.scan().exec();
       if (randomUser) {
-        const lastRandomUser = randomUser[randomUser.length - 1] as any;
+        const randomUserList = (await randomUser.populate()).toJSON();
+        const lastRandomUser = randomUserList[randomUserList.length - 1];
         const id = lastRandomUser.id;
 
-        lambdaTester(getRandomUserById)
+        return lambdaTester(getRandomUserById)
           .event({ pathParameters: { id: id } })
           .expectResult((result: any) => {
             console.log('result = ', result);
