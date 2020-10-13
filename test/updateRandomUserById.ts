@@ -8,7 +8,8 @@ export const updateRandomUserByIdTest = (): void => {
     test('updateRandomUserById test', async () => {
       const randomUser = await RandomUser.scan().exec();
       if (randomUser) {
-        const lastRandomUser = randomUser[randomUser.length - 1] as any;
+        const randomUserList = (await randomUser.populate()).toJSON();
+        const lastRandomUser = randomUserList[randomUserList.length - 1];
         const id = lastRandomUser.id;
 
         const bodyData = {
@@ -49,9 +50,8 @@ export const updateRandomUserByIdTest = (): void => {
           },
         };
 
-        lambdaTester(updateRandomUserById)
-          .event({ pathParameters: { id: id } })
-          .event(bodyData)
+        return lambdaTester(updateRandomUserById)
+          .event({ pathParameters: { id: id }, body: JSON.stringify(bodyData) })
           .expectResult((result: any) => {
             console.log('result = ', result);
             expect(result).toBeDefined();

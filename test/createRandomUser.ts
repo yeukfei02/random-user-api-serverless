@@ -43,8 +43,8 @@ export const createRandomUserTest = (): void => {
         },
       };
 
-      lambdaTester(createRandomUser)
-        .event({ body: bodyData })
+      return lambdaTester(createRandomUser)
+        .event({ body: JSON.stringify(bodyData) })
         .expectResult((result: any) => {
           console.log('result = ', result);
           expect(result).toBeDefined();

@@ -5,7 +5,7 @@ import { getMain } from '../src/main/handler';
 export const getMainTest = (): void => {
   describe('getMain test', () => {
     test('getMain test', async () => {
-      lambdaTester(getMain)
+      return lambdaTester(getMain)
         .event({})
         .expectResult((result: any) => {
           console.log('result = ', result);
