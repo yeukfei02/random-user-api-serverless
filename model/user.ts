@@ -11,7 +11,10 @@ dynamoose.aws.sdk.config.update({
 const userSchema = new dynamoose.Schema(
   {
     id: String,
-    email: String,
+    email: {
+      type: String,
+      rangeKey: true,
+    },
     password: String,
   },
   {
