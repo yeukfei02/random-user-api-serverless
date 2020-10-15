@@ -8,7 +8,7 @@ export const getRandomUserByIdTest = (): void => {
     test('getRandomUserById test', async () => {
       const randomUser = await RandomUser.scan().exec();
       if (randomUser) {
-        const randomUserList = (await randomUser.populate()).toJSON();
+        const randomUserList = randomUser.toJSON();
         const lastRandomUser = randomUserList[randomUserList.length - 1];
         const id = lastRandomUser.id;
 
