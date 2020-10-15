@@ -43,7 +43,10 @@ const randomUserSchema = new dynamoose.Schema(
         },
       },
     },
-    email: String,
+    email: {
+      type: String,
+      rangeKey: true,
+    },
     dob: {
       type: Object,
       schema: {
