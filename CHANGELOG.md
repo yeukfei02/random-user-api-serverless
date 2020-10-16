@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.19](https://github.com/yeukfei02/random-user-api-serverless/compare/v0.1.18...v0.1.19) (2020-10-16)
+
+
+### Features
+
+* 🎸 add aws xray lib ([afa62f9](https://github.com/yeukfei02/random-user-api-serverless/commit/afa62f9068ecfd400315805278f8b810e9910295))
+
 ### [0.1.18](https://github.com/yeukfei02/random-user-api-serverless/compare/v0.1.17...v0.1.18) (2020-10-15)
 
 ### [0.1.17](https://github.com/yeukfei02/random-user-api-serverless/compare/v0.1.16...v0.1.17) (2020-10-15)
