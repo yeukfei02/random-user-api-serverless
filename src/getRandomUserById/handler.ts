@@ -1,4 +1,7 @@
 import { Handler } from 'aws-lambda';
+import awsXRay from 'aws-xray-sdk';
+import awsSdk from 'aws-sdk';
+awsXRay.captureAWS(awsSdk);
 
 import RandomUser from '../../model/randomUser';
 

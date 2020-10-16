@@ -1,6 +1,9 @@
 import { Handler } from 'aws-lambda';
+import awsXRay from 'aws-xray-sdk';
+import awsSdk from 'aws-sdk';
+awsXRay.captureAWS(awsSdk);
+
 import axios from 'axios';
-import _ from 'lodash';
 import { v4 as uuidv4 } from 'uuid';
 
 import RandomUser from '../../model/randomUser';
