@@ -6,12 +6,12 @@ env.config();
 
 export const authorize: Handler = async (event: any, context: any, callback: any) => {
   const token = event.authorizationToken.replace('Bearer ', '');
-  const methodArn = event.methodArn;
+  // const methodArn = event.methodArn;
 
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET as string) as any;
     const effect = decoded ? 'Allow' : 'Deny';
-    const policyDocument = generatePolicyDocument(decoded.id, effect, methodArn);
+    const policyDocument = generatePolicyDocument(decoded.id, effect);
     callback(null, policyDocument);
   } catch (e) {
     console.log('error = ', e);
@@ -19,10 +19,10 @@ export const authorize: Handler = async (event: any, context: any, callback: any
   }
 };
 
-function generatePolicyDocument(principalId: string, effect: string, methodArn: string) {
+function generatePolicyDocument(principalId: string, effect: string) {
   let policyDocument = {};
 
-  if (principalId && effect && methodArn) {
+  if (principalId && effect) {
     policyDocument = {
       principalId: principalId,
       policyDocument: {
@@ -31,7 +31,7 @@ function generatePolicyDocument(principalId: string, effect: string, methodArn: 
           {
             Action: 'execute-api:Invoke',
             Effect: effect,
-            Resource: methodArn,
+            Resource: '*',
           },
         ],
       },
