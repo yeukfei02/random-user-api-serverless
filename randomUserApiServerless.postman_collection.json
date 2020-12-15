@@ -24,13 +24,13 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:3000/v1/api/user/signup",
+							"raw": "localhost:3000/dev/api/user/signup",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
-								"v1",
+								"dev",
 								"api",
 								"user",
 								"signup"
@@ -124,13 +124,13 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:3000/v1/api/user/login",
+							"raw": "localhost:3000/dev/api/user/login",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
-								"v1",
+								"dev",
 								"api",
 								"user",
 								"login"
@@ -245,7 +245,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJkODMzODU3LTZjYzMtNDQ2Yi1iYmQ0LTdmOGVhNzBiYTA3OSIsImlhdCI6MTYwMjUxNTYzMiwiZXhwIjoxNjAyNjAyMDMyfQ.a2aizQ4gPULR7zGLE3Ht8a69t3yS2nAU9H2OHU07T3E",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImEzY2JhOTY2LTE0NmYtNGQ4Yi04YjM1LWJmOWVhODk2MmNlZCIsImlhdCI6MTYwNzk5MzAwMiwiZXhwIjoxNjA4MDc5NDAyfQ.69bb0MhlyFiowsO-VIV-qJYXnjDr9ymtzTpIi63b3pU",
 								"type": "text"
 							}
 						],
@@ -259,13 +259,13 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:3000/v1/api/random-user",
+							"raw": "localhost:3000/dev/api/random-user",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
-								"v1",
+								"dev",
 								"api",
 								"random-user"
 							]
@@ -355,7 +355,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZmNlY2JlLTcyYWItNDJhYi1iYjExLWViNGExZmEzODRlOSIsImlhdCI6MTYwMjUxNTI4MywiZXhwIjoxNjAyNjAxNjgzfQ.quvoQcdxn_KxR5GaGccW0IDDR8i95nSlHWZ7m3_rVT8",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YTYxYTM2LWEzYjktNGQxOC1iMTM2LTFkNzNmN2UwZTBkZCIsImlhdCI6MTYwNzk5MzA3MywiZXhwIjoxNjA4MDc5NDczfQ.Z1b__OOMxFwFONQvtvhG949Vkkisb1e3sbH0lMJrPH0",
 								"type": "text"
 							}
 						],
@@ -369,13 +369,13 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:3000/v1/api/random-user?page=1&results=5",
+							"raw": "localhost:3000/dev/api/random-user?page=1&results=5",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
-								"v1",
+								"dev",
 								"api",
 								"random-user"
 							],
@@ -489,7 +489,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImY3NjU5ODQ2LTdjYTItNDNiMi1iYmQwLTBiMTNhN2NlOGQ5MyIsImlhdCI6MTYwMjUxMzg4NiwiZXhwIjoxNjAyNjAwMjg2fQ.2SEBzOnLY-ots3GMzgcui1auJfVTxMBWHz9HkJmvSc0",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YTYxYTM2LWEzYjktNGQxOC1iMTM2LTFkNzNmN2UwZTBkZCIsImlhdCI6MTYwNzk5MzA3MywiZXhwIjoxNjA4MDc5NDczfQ.Z1b__OOMxFwFONQvtvhG949Vkkisb1e3sbH0lMJrPH0",
 								"type": "text"
 							}
 						],
@@ -503,16 +503,16 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:3000/v1/api/random-user/1283a2d7-0cf1-4d85-a9cc-51a6f29e83bd",
+							"raw": "localhost:3000/dev/api/random-user/24166f99-47b4-4e3c-9e55-70ec429d716c",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
-								"v1",
+								"dev",
 								"api",
 								"random-user",
-								"1283a2d7-0cf1-4d85-a9cc-51a6f29e83bd"
+								"24166f99-47b4-4e3c-9e55-70ec429d716c"
 							]
 						},
 						"description": "/random-user/{id}"
@@ -616,13 +616,13 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:3000/v1/api/random-user/1283a2d7-0cf1-4d85-a9cc-51a6f29e83bd",
+							"raw": "localhost:3000/dev/api/random-user/1283a2d7-0cf1-4d85-a9cc-51a6f29e83bd",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
-								"v1",
+								"dev",
 								"api",
 								"random-user",
 								"1283a2d7-0cf1-4d85-a9cc-51a6f29e83bd"
@@ -653,13 +653,13 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:3000/v1/api/random-user/0bc33d94-5f47-4990-b742-6fa937cb9e7f",
+							"raw": "localhost:3000/dev/api/random-user/0bc33d94-5f47-4990-b742-6fa937cb9e7f",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
-								"v1",
+								"dev",
 								"api",
 								"random-user",
 								"0bc33d94-5f47-4990-b742-6fa937cb9e7f"
