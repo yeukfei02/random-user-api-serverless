@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.23](https://github.com/yeukfei02/random-user-api-serverless/compare/v0.1.22...v0.1.23) (2020-12-15)
+
+
+### Bug Fixes
+
+* 🐛 fix stage and NODE_ENV ([81f81fd](https://github.com/yeukfei02/random-user-api-serverless/commit/81f81fdd136a0468717cd747f5452bcf0164c988))
+* 🐛 fix stage and NODE_ENV in master branch ([59b42d6](https://github.com/yeukfei02/random-user-api-serverless/commit/59b42d61b5355cac84f19d3692d1f2595d4d8d5e))
+
 ### [0.1.22](https://github.com/yeukfei02/random-user-api-serverless/compare/v0.1.21...v0.1.22) (2020-10-21)
 
 ### [0.1.21](https://github.com/yeukfei02/random-user-api-serverless/compare/v0.1.20...v0.1.21) (2020-10-21)
