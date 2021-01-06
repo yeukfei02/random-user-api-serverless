@@ -5,7 +5,7 @@ awsXRay.captureAWS(awsSdk);
 
 import RandomUser from '../../model/randomUser';
 
-export const updateRandomUserById: Handler = async (event: any) => {
+export const updateRandomUserById: Handler = async (event: any, context: any, callback: any) => {
   let response = {};
 
   const id = event.pathParameters.id;
