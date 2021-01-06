@@ -1,5 +1,5 @@
-import env from 'dotenv';
-env.config();
+// import env from 'dotenv';
+// env.config();
 
 import dynamoose from 'dynamoose';
 dynamoose.aws.sdk.config.update({

@@ -3,12 +3,16 @@ app: random-user-api-serverless
 service: random-user-api-serverless
 
 frameworkVersion: '2'
+useDotenv: true
 
 provider:
   name: aws
   runtime: nodejs12.x
   stage: prod
   region: ap-southeast-1
+  tracing:
+    apiGateway: true
+    lambda: true
   environment:
     NODE_ENV: production
     MY_AWS_ACCESS_KEY: ${param:MY_AWS_ACCESS_KEY}
@@ -21,11 +25,13 @@ provider:
         - 'xray:PutTelemetryRecords'
       Resource:
         - '*'
+  apiGateway:
+    shouldStartNameWithService: true
+  lambdaHashingVersion: 20201221
 
 functions:
   main:
     handler: src/main/handler.getMain
-    tracing: true
     events:
       - http:
           path: /api
@@ -34,7 +40,6 @@ functions:
 
   signup:
     handler: src/signup/handler.signup
-    tracing: true
     events:
       - http:
           path: /api/user/signup
@@ -43,7 +48,6 @@ functions:
 
   login:
     handler: src/login/handler.login
-    tracing: true
     events:
       - http:
           path: /api/user/login
@@ -55,7 +59,6 @@ functions:
 
   createRandomUser:
     handler: src/createRandomUser/handler.createRandomUser
-    tracing: true
     events:
       - http:
           path: /api/random-user
@@ -66,7 +69,6 @@ functions:
 
   getRandomUser:
     handler: src/getRandomUser/handler.getRandomUser
-    tracing: true
     events:
       - http:
           path: /api/random-user
@@ -77,7 +79,6 @@ functions:
 
   getRandomUserById:
     handler: src/getRandomUserById/handler.getRandomUserById
-    tracing: true
     events:
       - http:
           path: /api/random-user/{id}
@@ -88,7 +89,6 @@ functions:
 
   updateRandomUserById:
     handler: src/updateRandomUserById/handler.updateRandomUserById
-    tracing: true
     events:
       - http:
           path: /api/random-user/{id}
@@ -99,7 +99,6 @@ functions:
 
   deleteRandomUserById:
     handler: src/deleteRandomUserById/handler.deleteRandomUserById
-    tracing: true
     events:
       - http:
           path: /api/random-user/{id}
@@ -111,5 +110,4 @@ functions:
 plugins:
   - serverless-plugin-typescript
   - serverless-offline
-  - serverless-plugin-tracing
   - serverless-plugin-split-stacks
