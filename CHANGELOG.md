@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.26](https://github.com/yeukfei02/random-user-api-serverless/compare/v0.1.25...v0.1.26) (2021-01-06)
+
+
+### Bug Fixes
+
+* 🐛 remove not used lib ([07dedc7](https://github.com/yeukfei02/random-user-api-serverless/commit/07dedc77cf21fa6a6863833ff0f990df5849d4d1))
+
 ### [0.1.25](https://github.com/yeukfei02/random-user-api-serverless/compare/v0.1.24...v0.1.25) (2020-12-15)
 
 ### [0.1.24](https://github.com/yeukfei02/random-user-api-serverless/compare/v0.1.23...v0.1.24) (2020-12-15)
