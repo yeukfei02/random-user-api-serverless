@@ -12,7 +12,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 import User from '../../model/user';
 
-export const login: Handler = async (event: any) => {
+export const login: Handler = async (event: any, context: any, callback: any) => {
   let response = {};
 
   const body = JSON.parse(event.body);

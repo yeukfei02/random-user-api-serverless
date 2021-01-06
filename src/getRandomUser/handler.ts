@@ -8,7 +8,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 import RandomUser from '../../model/randomUser';
 
-export const getRandomUser: Handler = async (event: any) => {
+export const getRandomUser: Handler = async (event: any, context: any, callback: any) => {
   let response = {};
 
   if (event.queryStringParameters) {
