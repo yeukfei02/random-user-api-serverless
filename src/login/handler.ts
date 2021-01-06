@@ -1,3 +1,6 @@
+// import env from 'dotenv';
+// env.config();
+
 import { Handler } from 'aws-lambda';
 import awsXRay from 'aws-xray-sdk';
 import awsSdk from 'aws-sdk';
@@ -8,9 +11,6 @@ import jwt from 'jsonwebtoken';
 import { v4 as uuidv4 } from 'uuid';
 
 import User from '../../model/user';
-
-import env from 'dotenv';
-env.config();
 
 export const login: Handler = async (event: any) => {
   let response = {};

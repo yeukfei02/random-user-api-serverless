@@ -1,8 +1,8 @@
+// import env from 'dotenv';
+// env.config();
+
 import { Handler } from 'aws-lambda';
 import jwt from 'jsonwebtoken';
-
-import env from 'dotenv';
-env.config();
 
 export const authorize: Handler = async (event: any, context: any, callback: any) => {
   const token = event.authorizationToken.replace('Bearer ', '');
