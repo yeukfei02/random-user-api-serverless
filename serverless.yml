@@ -28,7 +28,7 @@ provider:
         - '*'
   apiGateway:
     shouldStartNameWithService: true
-    description: random user api serverless dev
+    description: random user api serverless prod
   lambdaHashingVersion: 20201221
 
 functions:
