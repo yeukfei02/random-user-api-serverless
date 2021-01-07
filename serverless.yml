@@ -10,6 +10,7 @@ provider:
   runtime: nodejs12.x
   stage: dev
   region: ap-southeast-1
+  apiName: random-user-api-serverless-dev
   tracing:
     apiGateway: true
     lambda: true
