@@ -10,7 +10,7 @@ provider:
   runtime: nodejs12.x
   stage: prod
   region: ap-southeast-1
-  apiName: random-user-api-serverless-dev
+  apiName: random-user-api-serverless-prod
   tracing:
     apiGateway: true
     lambda: true
