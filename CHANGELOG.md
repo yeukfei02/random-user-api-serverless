@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.29](https://github.com/yeukfei02/random-user-api-serverless/compare/v0.1.28...v0.1.29) (2021-01-17)
+
+
+### Bug Fixes
+
+* 🐛 add apiGateway description ([0b1557c](https://github.com/yeukfei02/random-user-api-serverless/commit/0b1557cd591b040bec058518e15fce57411a7043))
+* 🐛 fix apiGateway description in master ([ec84ec0](https://github.com/yeukfei02/random-user-api-serverless/commit/ec84ec04694748d1e18679cfbd69adea03c49ae2))
+* 🐛 remove not used file ([25e7c82](https://github.com/yeukfei02/random-user-api-serverless/commit/25e7c823b552e3b8bb6909af65efeb5af87584b0))
+
 ### [0.1.28](https://github.com/yeukfei02/random-user-api-serverless/compare/v0.1.27...v0.1.28) (2021-01-07)
 
 
