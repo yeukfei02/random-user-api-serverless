@@ -15,16 +15,6 @@ api url: https://onk8z688c0.execute-api.ap-southeast-1.amazonaws.com/prod/api
 ## Testing and run:
 
 ```
-// run function
-$ serverless invoke local --function main
-$ serverless invoke local --function signup --path ./data/signup.json
-$ serverless invoke local --function login --path ./data/login.json
-$ serverless invoke local --function createRandomUser --path ./data/createRandomUser.json
-$ serverless invoke local --function getRandomUser --path ./data/getRandomUser.json
-$ serverless invoke local --function getRandomUserById --path ./data/getRandomUserById.json
-$ serverless invoke local --function updateRandomUserById --path ./data/updateRandomUserById.json
-$ serverless invoke local --function deleteRandomUserById --path ./data/deleteRandomUserById.json
-
 // test api in local
 $ yarn run dev
 
