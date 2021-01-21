@@ -24,14 +24,11 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:3000/dev/api/user/signup",
+							"raw": "{{rootUrl}}/user/signup",
 							"host": [
-								"localhost"
+								"{{rootUrl}}"
 							],
-							"port": "3000",
 							"path": [
-								"dev",
-								"api",
 								"user",
 								"signup"
 							]
@@ -111,6 +108,21 @@
 				},
 				{
 					"name": "/login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const jsonData = pm.response.json();",
+									"console.log(\"jsonData = \", jsonData);",
+									"if (jsonData) {",
+									"    pm.environment.set(\"jwtToken\", jsonData.token);",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -124,14 +136,11 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:3000/dev/api/user/login",
+							"raw": "{{rootUrl}}/user/login",
 							"host": [
-								"localhost"
+								"{{rootUrl}}"
 							],
-							"port": "3000",
 							"path": [
-								"dev",
-								"api",
 								"user",
 								"login"
 							]
@@ -215,7 +224,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "0811b842-8152-4d7a-b310-cdaec96e34b2",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -225,15 +233,13 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "b2839883-2a89-4575-a08a-366aed3211be",
 						"type": "text/javascript",
 						"exec": [
 							""
 						]
 					}
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "random-user",
@@ -241,14 +247,18 @@
 				{
 					"name": "/random-user",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwtToken}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImEzY2JhOTY2LTE0NmYtNGQ4Yi04YjM1LWJmOWVhODk2MmNlZCIsImlhdCI6MTYwNzk5MzAwMiwiZXhwIjoxNjA4MDc5NDAyfQ.69bb0MhlyFiowsO-VIV-qJYXnjDr9ymtzTpIi63b3pU",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "raw",
 							"raw": "{\n    \"gender\": \"male\",\n    \"name\": {\n        \"title\": \"mr\",\n        \"first\": \"brad\",\n        \"last\": \"gibson\"\n    },\n    \"location\": {\n        \"street\": \"9278 new road\",\n        \"city\": \"kilcoole\",\n        \"state\": \"waterford\",\n        \"postcode\": \"93027\",\n        \"coordinates\": {\n            \"latitude\": \"20.9267\",\n            \"longitude\": \"-7.9310\"\n        },\n        \"timezone\": {\n            \"offset\": \"-3:30\",\n            \"description\": \"Newfoundland\"\n        }\n    },\n    \"email\": \"brad.gibson@example.com\",\n    \"dob\": {\n        \"date\": \"1993-07-20T09:44:18.674Z\",\n        \"age\": 26\n    },\n    \"registered\": {\n        \"date\": \"2002-05-21T10:59:49.966Z\",\n        \"age\": 17\n    },\n    \"phone\": \"011-962-7516\",\n    \"picture\": {\n        \"large\": \"https://randomuser.me/api/portraits/men/75.jpg\",\n        \"medium\": \"https://randomuser.me/api/portraits/med/men/75.jpg\",\n        \"thumbnail\": \"https://randomuser.me/api/portraits/thumb/men/75.jpg\"\n    }\n}",
@@ -259,14 +269,11 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:3000/dev/api/random-user",
+							"raw": "{{rootUrl}}/random-user",
 							"host": [
-								"localhost"
+								"{{rootUrl}}"
 							],
-							"port": "3000",
 							"path": [
-								"dev",
-								"api",
 								"random-user"
 							]
 						},
@@ -351,14 +358,18 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwtToken}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YTYxYTM2LWEzYjktNGQxOC1iMTM2LTFkNzNmN2UwZTBkZCIsImlhdCI6MTYwNzk5MzA3MywiZXhwIjoxNjA4MDc5NDczfQ.Z1b__OOMxFwFONQvtvhG949Vkkisb1e3sbH0lMJrPH0",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "raw",
 							"raw": "",
@@ -369,14 +380,11 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:3000/dev/api/random-user?page=1&results=5",
+							"raw": "{{rootUrl}}/random-user?page=1&results=5",
 							"host": [
-								"localhost"
+								"{{rootUrl}}"
 							],
-							"port": "3000",
 							"path": [
-								"dev",
-								"api",
 								"random-user"
 							],
 							"query": [
@@ -485,14 +493,18 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwtToken}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YTYxYTM2LWEzYjktNGQxOC1iMTM2LTFkNzNmN2UwZTBkZCIsImlhdCI6MTYwNzk5MzA3MywiZXhwIjoxNjA4MDc5NDczfQ.Z1b__OOMxFwFONQvtvhG949Vkkisb1e3sbH0lMJrPH0",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "raw",
 							"raw": "",
@@ -503,14 +515,11 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:3000/dev/api/random-user/24166f99-47b4-4e3c-9e55-70ec429d716c",
+							"raw": "{{rootUrl}}/random-user/24166f99-47b4-4e3c-9e55-70ec429d716c",
 							"host": [
-								"localhost"
+								"{{rootUrl}}"
 							],
-							"port": "3000",
 							"path": [
-								"dev",
-								"api",
 								"random-user",
 								"24166f99-47b4-4e3c-9e55-70ec429d716c"
 							]
@@ -598,14 +607,18 @@
 				{
 					"name": "/random-user/{id}",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwtToken}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImY3NjU5ODQ2LTdjYTItNDNiMi1iYmQwLTBiMTNhN2NlOGQ5MyIsImlhdCI6MTYwMjUxMzg4NiwiZXhwIjoxNjAyNjAwMjg2fQ.2SEBzOnLY-ots3GMzgcui1auJfVTxMBWHz9HkJmvSc0",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "raw",
 							"raw": "{\n    \"gender\": \"female\",\n    \"name\": {\n        \"title\": \"mrs\",\n        \"first\": \"aaa\",\n        \"last\": \"bbb\"\n    },\n    \"location\": {\n        \"street\": \"1111 test road\",\n        \"city\": \"hong kong\",\n        \"state\": \"hong kong\",\n        \"postcode\": \"000000\",\n        \"coordinates\": {\n            \"latitude\": \"20.9267\",\n            \"longitude\": \"-7.9310\"\n        },\n        \"timezone\": {\n            \"offset\": \"-3:30\",\n            \"description\": \"Newfoundland\"\n        }\n    },\n    \"email\": \"alex.gibson@test.com\",\n    \"dob\": {\n        \"date\": \"1993-07-20T09:44:18.674Z\",\n        \"age\": 30\n    },\n    \"registered\": {\n        \"date\": \"2002-05-21T10:59:49.966Z\",\n        \"age\": 18\n    },\n    \"phone\": \"011-962-7516\",\n    \"picture\": {\n        \"large\": \"https://randomuser.me/api/portraits/men/75.jpg\",\n        \"medium\": \"https://randomuser.me/api/portraits/med/men/75.jpg\",\n        \"thumbnail\": \"https://randomuser.me/api/portraits/thumb/men/75.jpg\"\n    }\n}",
@@ -616,14 +629,11 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:3000/dev/api/random-user/1283a2d7-0cf1-4d85-a9cc-51a6f29e83bd",
+							"raw": "{{rootUrl}}/random-user/1283a2d7-0cf1-4d85-a9cc-51a6f29e83bd",
 							"host": [
-								"localhost"
+								"{{rootUrl}}"
 							],
-							"port": "3000",
 							"path": [
-								"dev",
-								"api",
 								"random-user",
 								"1283a2d7-0cf1-4d85-a9cc-51a6f29e83bd"
 							]
@@ -635,14 +645,18 @@
 				{
 					"name": "/random-user/{id}",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwtToken}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImY3NjU5ODQ2LTdjYTItNDNiMi1iYmQwLTBiMTNhN2NlOGQ5MyIsImlhdCI6MTYwMjUxMzg4NiwiZXhwIjoxNjAyNjAwMjg2fQ.2SEBzOnLY-ots3GMzgcui1auJfVTxMBWHz9HkJmvSc0",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "raw",
 							"raw": "",
@@ -653,14 +667,11 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:3000/dev/api/random-user/0bc33d94-5f47-4990-b742-6fa937cb9e7f",
+							"raw": "{{rootUrl}}/random-user/0bc33d94-5f47-4990-b742-6fa937cb9e7f",
 							"host": [
-								"localhost"
+								"{{rootUrl}}"
 							],
-							"port": "3000",
 							"path": [
-								"dev",
-								"api",
 								"random-user",
 								"0bc33d94-5f47-4990-b742-6fa937cb9e7f"
 							]
@@ -747,7 +758,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "4f3ebc0c-d4da-4400-9645-d09ec14fcf76",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -757,16 +767,13 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "ce320e7a-7eda-4e70-af3e-23bbcbc7abe8",
 						"type": "text/javascript",
 						"exec": [
 							""
 						]
 					}
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		}
-	],
-	"protocolProfileBehavior": {}
+	]
 }
