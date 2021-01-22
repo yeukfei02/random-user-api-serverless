@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.30](https://github.com/yeukfei02/random-user-api-serverless/compare/v0.1.29...v0.1.30) (2021-01-22)
+
+
+### Features
+
+* 🎸 update sls and dynamoose lib ([fccdb2c](https://github.com/yeukfei02/random-user-api-serverless/commit/fccdb2c559e469ca07079184b07416f98c93d89e))
+
 ### [0.1.29](https://github.com/yeukfei02/random-user-api-serverless/compare/v0.1.28...v0.1.29) (2021-01-17)
 
 
