@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.31](https://github.com/yeukfei02/random-user-api-serverless/compare/v0.1.30...v0.1.31) (2021-01-22)
+
+
+### Features
+
+* 🎸 add package command ([b7cd391](https://github.com/yeukfei02/random-user-api-serverless/commit/b7cd391397a81a504dd35bd313a4229de14fe9c3))
+* 🎸 add serverless-prune-plugin ([41cac02](https://github.com/yeukfei02/random-user-api-serverless/commit/41cac02420b852f1cfce716502844103b9c8dbc1))
+
+
+### Bug Fixes
+
+* 🐛 update sls lib ([846e2d4](https://github.com/yeukfei02/random-user-api-serverless/commit/846e2d4a0e430bf3b0b5e02169ba13dba5e277ca))
+
 ### [0.1.30](https://github.com/yeukfei02/random-user-api-serverless/compare/v0.1.29...v0.1.30) (2021-01-22)
 
 
