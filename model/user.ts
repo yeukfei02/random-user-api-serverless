@@ -18,6 +18,7 @@ const userSchema = new dynamoose.Schema(
     password: String,
   },
   {
+    saveUnknown: true,
     timestamps: {
       createdAt: 'createdAt',
       updatedAt: 'updatedAt',
