@@ -69,6 +69,7 @@ const randomUserSchema = new dynamoose.Schema(
     },
   },
   {
+    saveUnknown: true,
     timestamps: {
       createdAt: 'createdAt',
       updatedAt: 'updatedAt',
