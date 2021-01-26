@@ -1,7 +1,9 @@
 import { Handler } from 'aws-lambda';
 import awsXRay from 'aws-xray-sdk';
 import awsSdk from 'aws-sdk';
-awsXRay.captureAWS(awsSdk);
+if (process.env._X_AMZN_TRACE_ID) {
+  awsXRay.captureAWS(awsSdk);
+}
 
 import bcrypt from 'bcryptjs';
 import { v4 as uuidv4 } from 'uuid';
