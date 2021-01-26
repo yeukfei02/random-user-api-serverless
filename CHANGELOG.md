@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.32](https://github.com/yeukfei02/random-user-api-serverless/compare/v0.1.31...v0.1.32) (2021-01-26)
+
+
+### Bug Fixes
+
+* 🐛 fix xray tracing id ([5371081](https://github.com/yeukfei02/random-user-api-serverless/commit/5371081ddde5c9f2cb61857c209c68c0ad7c41ab))
+
 ### [0.1.31](https://github.com/yeukfei02/random-user-api-serverless/compare/v0.1.30...v0.1.31) (2021-01-22)
 
 
