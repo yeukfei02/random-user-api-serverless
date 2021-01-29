@@ -1,4 +1,4 @@
-import { Handler } from 'aws-lambda';
+import { APIGatewayEvent, Context, Callback, Handler } from 'aws-lambda';
 import awsXRay from 'aws-xray-sdk';
 import awsSdk from 'aws-sdk';
 if (process.env._X_AMZN_TRACE_ID) {
@@ -7,12 +7,12 @@ if (process.env._X_AMZN_TRACE_ID) {
 
 import RandomUser from '../../model/randomUser';
 
-export const updateRandomUserById: Handler = async (event: any, context: any, callback: any) => {
+export const updateRandomUserById: Handler = async (event: APIGatewayEvent, context: Context, callback: Callback) => {
   let response = {};
 
-  const id = event.pathParameters.id;
+  const id = event.pathParameters ? event.pathParameters.id : '';
   if (id) {
-    const body = JSON.parse(event.body);
+    const body = event.body ? JSON.parse(event.body) : null;
 
     const gender = body.gender;
     const name = body.name;

@@ -1,10 +1,10 @@
 // import env from 'dotenv';
 // env.config();
 
-import { Handler } from 'aws-lambda';
+import { Context, Callback, Handler } from 'aws-lambda';
 import jwt from 'jsonwebtoken';
 
-export const authorize: Handler = async (event: any, context: any, callback: any) => {
+export const authorize: Handler = async (event: any, context: Context, callback: Callback) => {
   const token = event.authorizationToken.replace('Bearer ', '');
   // const methodArn = event.methodArn;
 

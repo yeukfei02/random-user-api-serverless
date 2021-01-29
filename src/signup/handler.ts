@@ -1,4 +1,4 @@
-import { Handler } from 'aws-lambda';
+import { APIGatewayEvent, Context, Callback, Handler } from 'aws-lambda';
 import awsXRay from 'aws-xray-sdk';
 import awsSdk from 'aws-sdk';
 if (process.env._X_AMZN_TRACE_ID) {
@@ -10,10 +10,10 @@ import { v4 as uuidv4 } from 'uuid';
 
 import User from '../../model/user';
 
-export const signup: Handler = async (event: any, context: any, callback: any) => {
+export const signup: Handler = async (event: APIGatewayEvent, context: Context, callback: Callback) => {
   let response = {};
 
-  const body = JSON.parse(event.body);
+  const body = event.body ? JSON.parse(event.body) : null;
   if (body) {
     const email = body.email;
     const password = bcrypt.hashSync(body.password, 10);
