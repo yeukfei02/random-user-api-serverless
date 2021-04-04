@@ -2,19 +2,19 @@
 
 random-user-api-serverless
 
-documentation: https://documenter.getpostman.com/view/3827865/TVRj485z
+documentation: <https://documenter.getpostman.com/view/3827865/TVRj485z>
 
-api url: https://onk8z688c0.execute-api.ap-southeast-1.amazonaws.com/prod/api
+api url: <https://onk8z688c0.execute-api.ap-southeast-1.amazonaws.com/prod/api>
 
-## Requirement:
+## Requirement
 
 - install yarn
 - install node (v12+)
 - install serverless
 
-## Testing and run:
+## Testing and run
 
-```
+```zsh
 // test api in local
 $ yarn run dev
 
