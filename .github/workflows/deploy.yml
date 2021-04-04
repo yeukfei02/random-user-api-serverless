@@ -20,8 +20,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: yarn
-
-      - name: serverless deploy
       - run: npm install -g serverless
       - run: serverless config credentials --provider aws --key ${{ secrets.MY_AWS_ACCESS_KEY }} --secret ${{ secrets.MY_AWS_SECRET_ACCESS_KEY }}
       - run: yarn run deploy
