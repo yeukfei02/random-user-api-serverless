@@ -19,13 +19,15 @@ provider:
     MY_AWS_ACCESS_KEY: ${param:MY_AWS_ACCESS_KEY}
     MY_AWS_SECRET_ACCESS_KEY: ${param:MY_AWS_SECRET_ACCESS_KEY}
     JWT_SECRET: ${param:JWT_SECRET}
-  iamRoleStatements:
-    - Effect: 'Allow'
-      Action:
-        - 'xray:PutTraceSegments'
-        - 'xray:PutTelemetryRecords'
-      Resource:
-        - '*'
+  iam:
+    role:
+      statements:
+        - Effect: 'Allow'
+          Action:
+            - 'xray:PutTraceSegments'
+            - 'xray:PutTelemetryRecords'
+          Resource:
+            - '*'
   apiGateway:
     shouldStartNameWithService: true
     description: random user api serverless dev
