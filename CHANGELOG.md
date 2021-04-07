@@ -2,6 +2,35 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.34](https://github.com/yeukfei02/random-user-api-serverless/compare/v0.1.33...v0.1.34) (2021-04-07)
+
+
+### Features
+
+* 🎸 add github actions for deploy ([1d7767d](https://github.com/yeukfei02/random-user-api-serverless/commit/1d7767d2e0c4ed19b8c0b6b5c710cbfd89e7f412))
+* 🎸 add type for handler ([9c46010](https://github.com/yeukfei02/random-user-api-serverless/commit/9c46010f971780e9bdb9fa2d910bd47be7920899))
+* 🎸 use serverless-layers ([fba530d](https://github.com/yeukfei02/random-user-api-serverless/commit/fba530d78f638521fec261e8089e1fa654f5b91f))
+
+
+### Bug Fixes
+
+* 🐛 comment api url in readme.md ([074b8a9](https://github.com/yeukfei02/random-user-api-serverless/commit/074b8a9526d6b9cb7a3e43f488daaec0281ec05c))
+* 🐛 comment deploy.yml ([0f32c0c](https://github.com/yeukfei02/random-user-api-serverless/commit/0f32c0c689d364939b6b5bf23ff11ac4316349c9))
+* 🐛 comment deploy.yml ([8f97149](https://github.com/yeukfei02/random-user-api-serverless/commit/8f9714998ca217bfe4ba91720012ba22ea3a8943))
+* 🐛 comment serverless-plugin-split-stacks lib ([332a72e](https://github.com/yeukfei02/random-user-api-serverless/commit/332a72e8d97a23df4735e94278da6b47265d4914))
+* 🐛 fix deploy.yml ([9679ffc](https://github.com/yeukfei02/random-user-api-serverless/commit/9679ffc46e92401ed12166b7afbac8a3465f3ee4))
+* 🐛 fix deploy.yml ([ef4cb22](https://github.com/yeukfei02/random-user-api-serverless/commit/ef4cb221a7e54c2ae8bf52653e469224d6dc4a4b))
+* 🐛 fix deploy.yml ([e17581f](https://github.com/yeukfei02/random-user-api-serverless/commit/e17581fd1c3c10ccdf5f015049856aa23c41071e))
+* 🐛 fix deploy.yml ([0e5fb9d](https://github.com/yeukfei02/random-user-api-serverless/commit/0e5fb9d64ecfec4c027415a132b949026b3e9b81))
+* 🐛 fix github acitons ([f09599b](https://github.com/yeukfei02/random-user-api-serverless/commit/f09599b56d67a36b708d11269865b51b501ef24a))
+* 🐛 fix sls.yml, readme.md, deploy.yml ([6e3a339](https://github.com/yeukfei02/random-user-api-serverless/commit/6e3a339ba38b778f62a7ada42ab02f17cdd9f318))
+* 🐛 fix stage in deploy.yml ([32d12fa](https://github.com/yeukfei02/random-user-api-serverless/commit/32d12faa8a3990ead19566c79f27daa864247d55))
+* 🐛 uncomment serverless-plugin-split-stacks lib ([6fca9e2](https://github.com/yeukfei02/random-user-api-serverless/commit/6fca9e25f6ccd9816e86ba8173ea7ac8a77fa311))
+* 🐛 update github actions yml ([9cd3916](https://github.com/yeukfei02/random-user-api-serverless/commit/9cd3916a88d8e5e86a76abdad23552a9fc7b5d13))
+* 🐛 update serverless-plugin-split-stacks lib ([5fe3773](https://github.com/yeukfei02/random-user-api-serverless/commit/5fe37730555a00ce2ff0f0160ea48d86c65d42bc))
+* 🐛 update sls lib ([61f973f](https://github.com/yeukfei02/random-user-api-serverless/commit/61f973f8cb4f7352007e6c3d58eabeb76c1f08d8))
+* 🐛 update sls lib ([911161f](https://github.com/yeukfei02/random-user-api-serverless/commit/911161ffdad19dda118361df248bb8586e7de3f1))
+
 ### [0.1.33](https://github.com/yeukfei02/random-user-api-serverless/compare/v0.1.32...v0.1.33) (2021-01-27)
 
 
