@@ -5,7 +5,7 @@ if (process.env._X_AMZN_TRACE_ID) {
   awsXRay.captureAWS(awsSdk);
 }
 
-import RandomUser from '../../model/randomUser';
+import RandomUser from '../../model/RandomUser';
 
 export const deleteRandomUserById: Handler = async (event: APIGatewayEvent, context: Context, callback: Callback) => {
   let response = {};
