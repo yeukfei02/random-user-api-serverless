@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.2](https://github.com/yeukfei02/random-user-api-serverless/compare/v0.2.1...v0.2.2) (2021-04-16)
+
+
+### Bug Fixes
+
+* 🐛 rename model file ([23ddc85](https://github.com/yeukfei02/random-user-api-serverless/commit/23ddc85dd42f2fe8a7160c5f90d3e3ecb1b9fcb2))
+
 ### [0.2.1](https://github.com/yeukfei02/random-user-api-serverless/compare/v0.1.34...v0.2.1) (2021-04-07)
 
 ### [0.1.34](https://github.com/yeukfei02/random-user-api-serverless/compare/v0.1.33...v0.1.34) (2021-04-07)
