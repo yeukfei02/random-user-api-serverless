@@ -7,7 +7,7 @@ if (process.env._X_AMZN_TRACE_ID) {
 
 import { v4 as uuidv4 } from 'uuid';
 
-import RandomUser from '../../model/randomUser';
+import RandomUser from '../../model/RandomUser';
 
 export const createRandomUser: Handler = async (event: APIGatewayEvent, context: Context, callback: Callback) => {
   let response = {};

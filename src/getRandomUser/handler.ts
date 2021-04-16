@@ -8,7 +8,7 @@ if (process.env._X_AMZN_TRACE_ID) {
 import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
 
-import RandomUser from '../../model/randomUser';
+import RandomUser from '../../model/RandomUser';
 
 export const getRandomUser: Handler = async (event: APIGatewayEvent, context: Context, callback: Callback) => {
   let response = {};

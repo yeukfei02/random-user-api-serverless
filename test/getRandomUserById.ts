@@ -1,5 +1,5 @@
 import lambdaTester from 'lambda-tester';
-import RandomUser from '../model/randomUser';
+import RandomUser from '../model/RandomUser';
 
 import { getRandomUserById } from '../src/getRandomUserById/handler';
 

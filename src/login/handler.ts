@@ -12,7 +12,7 @@ import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import { v4 as uuidv4 } from 'uuid';
 
-import User from '../../model/user';
+import User from '../../model/User';
 
 export const login: Handler = async (event: APIGatewayEvent, context: Context, callback: Callback) => {
   let response = {};

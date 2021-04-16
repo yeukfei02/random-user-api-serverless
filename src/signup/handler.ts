@@ -8,7 +8,7 @@ if (process.env._X_AMZN_TRACE_ID) {
 import bcrypt from 'bcryptjs';
 import { v4 as uuidv4 } from 'uuid';
 
-import User from '../../model/user';
+import User from '../../model/User';
 
 export const signup: Handler = async (event: APIGatewayEvent, context: Context, callback: Callback) => {
   let response = {};
