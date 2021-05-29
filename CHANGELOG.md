@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.3](https://github.com/yeukfei02/random-user-api-serverless/compare/v0.2.2...v0.2.3) (2021-05-29)
+
+
+### Bug Fixes
+
+* 🐛 add stage in sls deploy ([a477989](https://github.com/yeukfei02/random-user-api-serverless/commit/a47798917a61b4a3cd812ea487b82e3bd827af6c))
+* 🐛 change back sls version ([9e7e44f](https://github.com/yeukfei02/random-user-api-serverless/commit/9e7e44f1fc3ac5986403369b357759914f82ba86))
+* 🐛 change back to previous version ([d1ee68a](https://github.com/yeukfei02/random-user-api-serverless/commit/d1ee68a676bc9019c02bffc2126346f62ad143c4))
+* 🐛 comment deploy.yml ([8b894ef](https://github.com/yeukfei02/random-user-api-serverless/commit/8b894ef697d1b1ebbc93485a5629a53b7e021cd8))
+* 🐛 fix deploy.yml ([414bb31](https://github.com/yeukfei02/random-user-api-serverless/commit/414bb3137878c9d73c2cf4ec6cda69a332f3e8f6))
+* 🐛 fix deploy.yml ([1db5e4c](https://github.com/yeukfei02/random-user-api-serverless/commit/1db5e4c033b5afda349358cff1d1c169092144c4))
+* 🐛 update deploy.yml ([6b693fe](https://github.com/yeukfei02/random-user-api-serverless/commit/6b693fe7f3af66de3adeba79617e9921b29d45af))
+* 🐛 update sls lib and deploy.yml ([26494b9](https://github.com/yeukfei02/random-user-api-serverless/commit/26494b969983fb60c99274bffacdefe34e2a63af))
+* 🐛 use node14.x in deploy.yml ([6b10971](https://github.com/yeukfei02/random-user-api-serverless/commit/6b10971b6e91d15b31fcddebafbf2dad9820eed8))
+
 ### [0.2.2](https://github.com/yeukfei02/random-user-api-serverless/compare/v0.2.1...v0.2.2) (2021-04-16)
 
 
