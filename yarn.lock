@@ -1557,7 +1557,7 @@
     "@types/express-serve-static-core" "*"
     "@types/mime" "*"
 
-"@types/serverless@^1.78.28":
+"@types/serverless@^1.78.24":
   version "1.78.28"
   resolved "https://registry.yarnpkg.com/@types/serverless/-/serverless-1.78.28.tgz#36363f71725612390e5755773736f5d4357cba83"
   integrity sha512-VokwIvm4/8/nyD16Gj5gYKW/OAd33CaU6AAs5yLuuRJWHhPFOvmV1k1i+QPBy2/eSkhV2Hy6EbfeKSbxiGUm7A==
@@ -8899,7 +8899,7 @@ serverless-prune-plugin@^1.4.3:
   dependencies:
     bluebird "^3.4.7"
 
-serverless@^2.43.1:
+serverless@^2.34.0:
   version "2.43.1"
   resolved "https://registry.yarnpkg.com/serverless/-/serverless-2.43.1.tgz#7d8b0c1b0b5c2aa0f2bd04c3fb53fce5614783ad"
   integrity sha512-KasMG0u78+QBMecuT1Cit3PdHA1Wl6xyjrWgFEdtJnI5mBcMA9FZVMvdqRk1VjaQtnvNJfpbzfJa6Aj2rrqXWQ==
