@@ -4,7 +4,7 @@ random-user-api-serverless
 
 documentation: <https://documenter.getpostman.com/view/3827865/TVRj485z>
 
-api url: <https://e7k1ke40c1.execute-api.ap-southeast-1.amazonaws.com/prod/api>
+api url: <https://gf521xhx6e.execute-api.ap-southeast-1.amazonaws.com/prod/api>
 
 ## Requirement
 
