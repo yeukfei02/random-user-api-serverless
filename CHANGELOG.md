@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.4](https://github.com/yeukfei02/random-user-api-serverless/compare/v0.2.3...v0.2.4) (2021-07-31)
+
+
+### Bug Fixes
+
+* 🐛 change model filename ([b9829b9](https://github.com/yeukfei02/random-user-api-serverless/commit/b9829b9b1e858c2ba9bf5e85d3a187cb8f13b7fc))
+* 🐛 fix github actions ([50b3b8c](https://github.com/yeukfei02/random-user-api-serverless/commit/50b3b8c75f02f77a29eed224d65d6c953e0feb8a))
+* 🐛 fix sls.yml ([0d950fe](https://github.com/yeukfei02/random-user-api-serverless/commit/0d950fefe90bb939df570779392590e612092555))
+* 🐛 try github actions ([86d4704](https://github.com/yeukfei02/random-user-api-serverless/commit/86d470457e1e6d5e5cd72085d4b29b1f18c731f9))
+* 🐛 use node14.x ([8df90ca](https://github.com/yeukfei02/random-user-api-serverless/commit/8df90ca0a6f6993a9018ad906f06857b90b047dd))
+
 ### [0.2.3](https://github.com/yeukfei02/random-user-api-serverless/compare/v0.2.2...v0.2.3) (2021-05-29)
 
 
