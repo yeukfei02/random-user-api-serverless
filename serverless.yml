@@ -1,5 +1,5 @@
-org: yeukfei05
-app: random-user-api-serverless
+# org: yeukfei05
+# app: random-user-api-serverless
 service: random-user-api-serverless
 
 frameworkVersion: '2'
