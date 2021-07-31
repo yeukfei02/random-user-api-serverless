@@ -4,12 +4,12 @@ random-user-api-serverless
 
 documentation: <https://documenter.getpostman.com/view/3827865/TVRj485z>
 
-api url: <https://gf521xhx6e.execute-api.ap-southeast-1.amazonaws.com/prod/api>
+api url: <https://bed16qums5.execute-api.ap-southeast-1.amazonaws.com/prod/api>
 
 ## Requirement
 
 - install yarn
-- install node (v12+)
+- install node (v14+)
 - install serverless
 
 ## Testing and run
