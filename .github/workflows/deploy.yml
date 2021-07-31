@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [12.x]
+        node-version: [14.x]
 
     steps:
       - uses: actions/checkout@v2
@@ -20,15 +20,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: yarn
-
-      # - name: Install Serverless Framework
-      #   run: npm install -g serverless
-
-      # - name: Serverless AWS authentication
-      #   run: sls config credentials --provider aws --key ${{ secrets.MY_AWS_ACCESS_KEY }} --secret ${{ secrets.MY_AWS_SECRET_ACCESS_KEY }}
-
-      # - name: Serverless deploy
-      #   run: sls deploy --stage prod
 
       - name: serverless deploy
         uses: serverless/github-action@master
