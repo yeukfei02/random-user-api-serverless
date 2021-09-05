@@ -23,10 +23,12 @@ export const login: Handler = async (event: APIGatewayEvent, context: Context, c
     const password = body.password;
 
     if (email && password) {
-      const user: any = await User.scan({ email: { eq: email } }).exec();
+      const user: any = await User.scan({ email: { eq: email } })
+        .all()
+        .exec();
       console.log('user = ', user);
 
-      if (user.count === 1) {
+      if (user.length === 1) {
         const userPasswordFromDB = user[0].password;
         if (bcrypt.compareSync(password, userPasswordFromDB)) {
           const token = jwt.sign(

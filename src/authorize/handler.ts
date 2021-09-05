@@ -6,17 +6,24 @@ import jwt from 'jsonwebtoken';
 
 export const authorize: Handler = async (event: any, context: Context, callback: Callback) => {
   const token = event.authorizationToken.replace('Bearer ', '');
-  // const methodArn = event.methodArn;
 
+  let principalId = 'user';
+  let effect = 'Deny';
   try {
-    const decoded = jwt.verify(token, process.env.JWT_SECRET as string) as any;
-    const effect = decoded ? 'Allow' : 'Deny';
-    const policyDocument = generatePolicyDocument(decoded.id, effect);
-    callback(null, policyDocument);
+    const jwtSecret = process.env.JWT_SECRET ? process.env.JWT_SECRET : '';
+    const decoded = jwt.verify(token, jwtSecret) as any;
+    if (decoded) {
+      principalId = decoded.id;
+      effect = 'Allow';
+    }
   } catch (e) {
-    console.log('error = ', e);
-    callback(null, 'Unauthorized');
+    console.log('authorize error = ', e);
   }
+
+  const policyDocument = generatePolicyDocument(principalId, effect);
+  console.log('policyDocument = ', policyDocument);
+
+  return policyDocument;
 };
 
 function generatePolicyDocument(principalId: string, effect: string) {

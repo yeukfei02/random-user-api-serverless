@@ -6,7 +6,7 @@ import { updateRandomUserById } from '../src/updateRandomUserById/handler';
 export const updateRandomUserByIdTest = (): void => {
   describe('updateRandomUserById test', () => {
     test('updateRandomUserById test', async () => {
-      const randomUser = await RandomUser.scan().exec();
+      const randomUser = await RandomUser.scan().all().exec();
       if (randomUser) {
         const randomUserList = randomUser.toJSON();
         const lastRandomUser = randomUserList[randomUserList.length - 1];

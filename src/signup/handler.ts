@@ -20,6 +20,7 @@ export const signup: Handler = async (event: APIGatewayEvent, context: Context, 
 
     if (email && password) {
       const record = await User.scan({ email: { eq: email } })
+        .all()
         .count()
         .exec();
       console.log('record = ', record);
