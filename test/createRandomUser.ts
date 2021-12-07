@@ -4,7 +4,7 @@ import { createRandomUser } from '../src/createRandomUser/handler';
 
 export const createRandomUserTest = (): void => {
   describe('createRandomUser test', () => {
-    test('createRandomUser test', async () => {
+    test('createRandomUser', async () => {
       const bodyData = {
         gender: 'male',
         name: {

@@ -1,4 +1,4 @@
-import { getMainTest } from './main';
+import { mainTest } from './main';
 import { signupTest } from './signup';
 import { loginTest } from './login';
 
@@ -9,7 +9,7 @@ import { updateRandomUserByIdTest } from './updateRandomUserById';
 import { deleteRandomUserByIdTest } from './deleteUserById';
 
 describe('testSuite test case', () => {
-  getMainTest();
+  mainTest();
   signupTest();
   loginTest();
 

@@ -5,7 +5,7 @@ import { updateRandomUserById } from '../src/updateRandomUserById/handler';
 
 export const updateRandomUserByIdTest = (): void => {
   describe('updateRandomUserById test', () => {
-    test('updateRandomUserById test', async () => {
+    test('updateRandomUserById', async () => {
       const randomUser = await RandomUser.scan().all().exec();
       if (randomUser) {
         const randomUserList = randomUser.toJSON();

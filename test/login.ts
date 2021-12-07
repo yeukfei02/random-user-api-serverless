@@ -4,7 +4,7 @@ import { login } from '../src/login/handler';
 
 export const loginTest = (): void => {
   describe('login test', () => {
-    test('login test', async () => {
+    test('login', async () => {
       const bodyData = {
         email: 'test@email.com',
         password: 'test',

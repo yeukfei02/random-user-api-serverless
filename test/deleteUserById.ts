@@ -5,7 +5,7 @@ import { deleteRandomUserById } from '../src/deleteRandomUserById/handler';
 
 export const deleteRandomUserByIdTest = (): void => {
   describe('deleteRandomUserById test', () => {
-    test('deleteRandomUserById test', async () => {
+    test('deleteRandomUserById', async () => {
       const randomUser = await RandomUser.scan().all().exec();
       if (randomUser) {
         const randomUserList = randomUser.toJSON();

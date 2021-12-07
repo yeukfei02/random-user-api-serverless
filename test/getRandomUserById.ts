@@ -5,7 +5,7 @@ import { getRandomUserById } from '../src/getRandomUserById/handler';
 
 export const getRandomUserByIdTest = (): void => {
   describe('getRandomUserById test', () => {
-    test('getRandomUserById test', async () => {
+    test('getRandomUserById', async () => {
       const randomUser = await RandomUser.scan().all().exec();
       if (randomUser) {
         const randomUserList = randomUser.toJSON();
