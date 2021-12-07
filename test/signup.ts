@@ -5,7 +5,7 @@ import { signup } from '../src/signup/handler';
 
 export const signupTest = (): void => {
   describe('signup test', () => {
-    test('signup test', async () => {
+    test('signup', async () => {
       const bodyData = {
         email: `test-${uuidv4()}@email.com`,
         password: 'test',

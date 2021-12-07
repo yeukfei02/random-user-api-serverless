@@ -4,7 +4,7 @@ import { getRandomUser } from '../src/getRandomUser/handler';
 
 export const getRandomUserTest = (): void => {
   describe('getRandomUser test', () => {
-    test('getRandomUser test', async () => {
+    test('getRandomUser', async () => {
       return lambdaTester(getRandomUser)
         .event({})
         .expectResult((result: any) => {
