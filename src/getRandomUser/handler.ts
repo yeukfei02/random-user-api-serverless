@@ -59,14 +59,17 @@ async function getRandomUserRequest(page?: string, results?: string): Promise<nu
   if (response) {
     const responseData = response.data;
     if (responseData && responseData.results) {
-      responseData.results.forEach(async (item: any, i: number) => {
+      for (let index = 0; index < responseData.results.length; index++) {
+        const item = responseData.results[index];
+
         const existingRandomUser = await RandomUser.scan({ name: { eq: item.name } })
           .all()
           .exec();
         console.log('existingRandomUser = ', existingRandomUser);
 
         if (existingRandomUser && existingRandomUser.length === 0) await addRandomUserDataToDB(item);
-      });
+      }
+
       result = responseData.results;
     }
   }
