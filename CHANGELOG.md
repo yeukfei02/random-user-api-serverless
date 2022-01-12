@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.6](https://github.com/yeukfei02/random-user-api-serverless/compare/v0.2.5...v0.2.6) (2022-01-12)
+
+
+### Features
+
+* 🎸 update sls lib and use arm64 arch ([c3353d7](https://github.com/yeukfei02/random-user-api-serverless/commit/c3353d7cb3a2858c027b582c2b34672d6dba4da0))
+
 ### [0.2.5](https://github.com/yeukfei02/random-user-api-serverless/compare/v0.2.4...v0.2.5) (2021-12-30)
 
 
