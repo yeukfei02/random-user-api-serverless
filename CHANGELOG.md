@@ -2,6 +2,42 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.8](https://github.com/yeukfei02/random-user-api-serverless/compare/v0.2.7...v0.2.8) (2022-01-30)
+
+
+### Bug Fixes
+
+* 🐛 update deploy.yml ([88d4514](https://github.com/yeukfei02/random-user-api-serverless/commit/88d4514f575acf1a2b10e52fcf162ad26db0bb58))
+* 🐛 update sls.yml ([ca699d1](https://github.com/yeukfei02/random-user-api-serverless/commit/ca699d115d1284af10dcedd3ff28b29dd5f1fc63))
+
+### [0.2.7](https://github.com/yeukfei02/random-user-api-serverless/compare/v0.2.6...v0.2.7) (2022-01-30)
+
+
+### Features
+
+* 🎸 use sls v3 ([51c0809](https://github.com/yeukfei02/random-user-api-serverless/commit/51c080971b278546b7770d90c502cf57d937c19e))
+
+
+### Bug Fixes
+
+* 🐛 update sls version and remove not used lib ([c369cec](https://github.com/yeukfei02/random-user-api-serverless/commit/c369cec13dd3862a708cb663954a9833d7323e32))
+
+### [0.2.6](https://github.com/yeukfei02/random-user-api-serverless/compare/v0.2.5...v0.2.6) (2022-01-12)
+
+
+### Features
+
+* 🎸 update sls lib and use arm64 arch ([c3353d7](https://github.com/yeukfei02/random-user-api-serverless/commit/c3353d7cb3a2858c027b582c2b34672d6dba4da0))
+
+### [0.2.5](https://github.com/yeukfei02/random-user-api-serverless/compare/v0.2.4...v0.2.5) (2021-12-30)
+
+
+### Bug Fixes
+
+* 🐛 fix authorizer and get data ([55d3b14](https://github.com/yeukfei02/random-user-api-serverless/commit/55d3b14444a2b5dba54bcf1fb52edaf78ac3c708))
+* 🐛 update sls lib and for loop ([8fdd99e](https://github.com/yeukfei02/random-user-api-serverless/commit/8fdd99e883bacb39ad030d2a8542b759df84ecfc))
+* 🐛 update test case ([3b28b36](https://github.com/yeukfei02/random-user-api-serverless/commit/3b28b36a8c4d0709ce1479b6068c47033aea9efb))
+
 ### [0.2.4](https://github.com/yeukfei02/random-user-api-serverless/compare/v0.2.3...v0.2.4) (2021-07-31)
 
 
