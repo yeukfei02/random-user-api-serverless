@@ -2,7 +2,7 @@ org: yeukfei05
 app: random-user-api-serverless
 service: random-user-api-serverless
 
-frameworkVersion: '3'
+frameworkVersion: '2'
 useDotenv: true
 
 provider:
