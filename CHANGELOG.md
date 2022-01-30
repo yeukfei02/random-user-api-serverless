@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.7](https://github.com/yeukfei02/random-user-api-serverless/compare/v0.2.6...v0.2.7) (2022-01-30)
+
+
+### Features
+
+* 🎸 use sls v3 ([51c0809](https://github.com/yeukfei02/random-user-api-serverless/commit/51c080971b278546b7770d90c502cf57d937c19e))
+
+
+### Bug Fixes
+
+* 🐛 update sls version and remove not used lib ([c369cec](https://github.com/yeukfei02/random-user-api-serverless/commit/c369cec13dd3862a708cb663954a9833d7323e32))
+
 ### [0.2.6](https://github.com/yeukfei02/random-user-api-serverless/compare/v0.2.5...v0.2.6) (2022-01-12)
 
 
