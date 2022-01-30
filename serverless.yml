@@ -2,7 +2,7 @@ org: yeukfei05
 app: random-user-api-serverless
 service: random-user-api-serverless
 
-frameworkVersion: '2'
+frameworkVersion: '3'
 useDotenv: true
 
 provider:
@@ -124,6 +124,3 @@ custom:
         packageManager: yarn
         dependenciesPath: ./package.json
         layersDeploymentBucket: random-user-api-serverless-serverless-layers
-  prune:
-    automatic: true
-    number: 3
