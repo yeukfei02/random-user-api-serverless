@@ -114,11 +114,9 @@ functions:
             name: authorize
 
 plugins:
-  - serverless-prune-plugin
   - serverless-layers
   - serverless-plugin-typescript
   - serverless-offline
-  # - serverless-plugin-split-stacks
 
 custom:
   serverless-layers:
