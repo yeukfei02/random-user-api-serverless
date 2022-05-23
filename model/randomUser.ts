@@ -1,6 +1,3 @@
-// import env from 'dotenv';
-// env.config();
-
 import dynamoose from 'dynamoose';
 dynamoose.aws.sdk.config.update({
   accessKeyId: process.env.MY_AWS_ACCESS_KEY,
@@ -70,10 +67,7 @@ const randomUserSchema = new dynamoose.Schema(
   },
   {
     saveUnknown: true,
-    timestamps: {
-      createdAt: 'createdAt',
-      updatedAt: 'updatedAt',
-    },
+    timestamps: true,
   },
 );
 const randomUserModel = dynamoose.model('RandomUser', randomUserSchema);
