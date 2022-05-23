@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.1](https://github.com/yeukfei02/random-user-api-serverless/compare/v0.3.0...v0.3.1) (2022-05-23)
+
+
+### Bug Fixes
+
+* 🐛 remove callback ([4f81866](https://github.com/yeukfei02/random-user-api-serverless/commit/4f818663fcef86f2ded6bbfbc5d5e460e6816ccf))
+* 🐛 remove postman collection json ([d0ee555](https://github.com/yeukfei02/random-user-api-serverless/commit/d0ee555ce686907e6f1e6061d7b052437962c850))
+* 🐛 update sls lib ([e40ae2f](https://github.com/yeukfei02/random-user-api-serverless/commit/e40ae2f463cc22a529ab592d020fd7873a54bfb9))
+* 🐛 update sls lib and fix model ([9762639](https://github.com/yeukfei02/random-user-api-serverless/commit/9762639cfb5e64857d3729326e5e9a3b925e91a2))
+
 ## [0.3.0](https://github.com/yeukfei02/random-user-api-serverless/compare/v0.2.8...v0.3.0) (2022-01-30)
 
 
