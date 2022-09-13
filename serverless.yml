@@ -31,7 +31,6 @@ provider:
   apiGateway:
     shouldStartNameWithService: true
     description: random user api serverless prod
-  lambdaHashingVersion: 20201221
   architecture: arm64
   timeout: 30
 
