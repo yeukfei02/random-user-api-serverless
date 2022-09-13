@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.2](https://github.com/yeukfei02/random-user-api-serverless/compare/v0.3.1...v0.3.2) (2022-09-13)
+
+
+### Bug Fixes
+
+* 🐛 fix serverless github action version ([3e17f97](https://github.com/yeukfei02/random-user-api-serverless/commit/3e17f97d05c28ffc3438a309a482b5ff32805d32))
+* 🐛 update serverless.yml ([c4fec5e](https://github.com/yeukfei02/random-user-api-serverless/commit/c4fec5e2730c9b86672cf5743648faaaf84c021a))
+* 🐛 update sls lib, husky and readme.md ([1d1e672](https://github.com/yeukfei02/random-user-api-serverless/commit/1d1e6722a7b9ec2792ff5887b2c6e6c9fb68a8ab))
+
 ### [0.3.1](https://github.com/yeukfei02/random-user-api-serverless/compare/v0.3.0...v0.3.1) (2022-05-23)
 
 
